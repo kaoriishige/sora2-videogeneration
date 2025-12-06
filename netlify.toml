@@ -1,0 +1,3 @@
+[build]
+  # Netlify Functionsのディレクトリを指定
+  functions = "netlify/functions"

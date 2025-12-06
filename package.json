@@ -1,0 +1,15 @@
+{
+  "name": "sora2api-video-generator",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Sora2API integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "netlify",
+    "sora"
+  ],
+  "author": "",
+  "license": "ISC"
+}
