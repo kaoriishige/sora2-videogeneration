@@ -2,58 +2,109 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Sora2API Video Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora Video Generation Test</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        #output { margin-top: 20px; padding: 10px; border: 1px solid #ccc; white-space: pre-wrap; }
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; background-color: #f4f4f9; }
+        h1 { color: #333; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="text"], textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; font-size: 16px; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        #status, #result { margin-top: 20px; padding: 15px; border-radius: 4px; }
+        #status { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+        #result { background-color: #e2e3e5; border: 1px solid #ccc; }
+        .success { background-color: #d4edda !important; color: #155724 !important; border-color: #c3e6cb !important; }
+        .error { background-color: #f8d7da !important; color: #721c24 !important; border-color: #f5c6cb !important; }
     </style>
 </head>
 <body>
-    <h2>Netlify Function 呼び出しテスト</h2>
-    
-    <label for="promptInput">プロンプトを入力してください:</label><br>
-    <textarea id="promptInput" rows="3" cols="50">A cat skateboarding in space with neon stars.</textarea><br><br>
-    
-    <button id="generateButton">動画生成をリクエスト</button>
-    
-    <h3>Functionsからの応答:</h3>
-    <div id="output"></div>
+
+    <h1>🎬 Sora Video Generation (Netlify Function Test)</h1>
+
+    <div id="status">リクエストを送信してください。</div>
+
+    <form id="videoForm">
+        <label for="prompt">プロンプト (生成したい動画の説明):</label>
+        <textarea id="prompt" rows="4" required placeholder="例: 日本庭園の池で優雅に泳ぐ金魚、高画質、シネマティック"></textarea>
+
+        <label for="callbackUrl">コールバックURL (自動入力):</label>
+        <input type="text" id="callbackUrl" readonly>
+        
+        <button type="submit" id="submitButton">動画生成をリクエスト</button>
+    </form>
+
+    <h2>結果表示エリア</h2>
+    <div id="result">
+        <p>ここに生成リクエストのID、ステータス、最終的な動画URLが表示されます。</p>
+    </div>
 
     <script>
-        document.getElementById('generateButton').addEventListener('click', async () => {
-            const prompt = document.getElementById('promptInput').value;
-            const outputDiv = document.getElementById('output');
-            
-            outputDiv.innerHTML = 'リクエスト送信中... 🚀';
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('videoForm');
+            const promptInput = document.getElementById('prompt');
+            const statusDiv = document.getElementById('status');
+            const resultDiv = document.getElementById('result');
+            const submitButton = document.getElementById('submitButton');
+            const callbackUrlInput = document.getElementById('callbackUrl');
 
-            // 💡 呼び出すNetlify Functionのエンドポイント
-            // 実際には、デプロイされたあなたのサイトのURLになります
-            const functionEndpoint = '/.netlify/functions/generate_video'; 
+            // 💡 コールバックURLを自動設定
+            // 現在のホスト名を使用して、sora_callback Function のエンドポイントを構築
+            const hostname = window.location.hostname;
+            const callbackEndpoint = `https://${hostname}/.netlify/functions/sora_callback`;
+            callbackUrlInput.value = callbackEndpoint;
 
-            try {
-                // Fetch APIを使ってPOSTリクエストを送信
-                const response = await fetch(functionEndpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ prompt: prompt })
-                });
 
-                const data = await response.json();
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
                 
-                if (response.ok) {
-                    outputDiv.innerHTML = `✅ 成功:\n${JSON.stringify(data, null, 2)}`;
-                    outputDiv.style.backgroundColor = '#e6ffe6';
-                } else {
-                    outputDiv.innerHTML = `❌ エラー (${response.status}):\n${JSON.stringify(data, null, 2)}`;
-                    outputDiv.style.backgroundColor = '#ffe6e6';
-                }
+                statusDiv.className = '';
+                statusDiv.textContent = 'リクエストを送信中... しばらくお待ちください。';
+                submitButton.disabled = true;
+                resultDiv.innerHTML = '<p>リクエストを処理中です...</p>';
 
-            } catch (error) {
-                outputDiv.innerHTML = `致命的なエラー:\n${error.message}`;
-                outputDiv.style.backgroundColor = '#ffe6e6';
-            }
+                const prompt = promptInput.value;
+                const callbackUrl = callbackUrlInput.value;
+                
+                // 💡 generate_video Function のエンドポイント
+                const generateEndpoint = '/.netlify/functions/generate_video'; 
+
+                try {
+                    const response = await fetch(generateEndpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            prompt: prompt,
+                            callback_url: callbackUrl,
+                        }),
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        statusDiv.className = 'success';
+                        statusDiv.textContent = '✅ リクエスト成功！動画生成が開始されました。';
+                        resultDiv.innerHTML = `
+                            <p><strong>リクエストID:</strong> ${data.request_id}</p>
+                            <p><strong>ステータス:</strong> ${data.status}</p>
+                            <p>動画が生成されると、コールバックURLを通じて通知されます。</p>
+                            <p>生成完了まで数分（またはそれ以上）かかる場合があります。</p>
+                        `;
+                    } else {
+                        statusDiv.className = 'error';
+                        statusDiv.textContent = `❌ エラーが発生しました: ${data.message || '不明なエラー'}`;
+                        resultDiv.innerHTML = `<p>エラー詳細: ${JSON.stringify(data)}</p>`;
+                    }
+
+                } catch (error) {
+                    statusDiv.className = 'error';
+                    statusDiv.textContent = `❌ 通信エラー: ${error.message}`;
+                } finally {
+                    submitButton.disabled = false;
+                }
+            });
         });
     </script>
 </body>
