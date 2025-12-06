@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Sora2API Video Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #output { margin-top: 20px; padding: 10px; border: 1px solid #ccc; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h2>Netlify Function 呼び出しテスト</h2>
+    
+    <label for="promptInput">プロンプトを入力してください:</label><br>
+    <textarea id="promptInput" rows="3" cols="50">A cat skateboarding in space with neon stars.</textarea><br><br>
+    
+    <button id="generateButton">動画生成をリクエスト</button>
+    
+    <h3>Functionsからの応答:</h3>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('generateButton').addEventListener('click', async () => {
+            const prompt = document.getElementById('promptInput').value;
+            const outputDiv = document.getElementById('output');
+            
+            outputDiv.innerHTML = 'リクエスト送信中... 🚀';
+
+            // 💡 呼び出すNetlify Functionのエンドポイント
+            // 実際には、デプロイされたあなたのサイトのURLになります
+            const functionEndpoint = '/.netlify/functions/generate_video'; 
+
+            try {
+                // Fetch APIを使ってPOSTリクエストを送信
+                const response = await fetch(functionEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt: prompt })
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    outputDiv.innerHTML = `✅ 成功:\n${JSON.stringify(data, null, 2)}`;
+                    outputDiv.style.backgroundColor = '#e6ffe6';
+                } else {
+                    outputDiv.innerHTML = `❌ エラー (${response.status}):\n${JSON.stringify(data, null, 2)}`;
+                    outputDiv.style.backgroundColor = '#ffe6e6';
+                }
+
+            } catch (error) {
+                outputDiv.innerHTML = `致命的なエラー:\n${error.message}`;
+                outputDiv.style.backgroundColor = '#ffe6e6';
+            }
+        });
+    </script>
+</body>
+</html>
