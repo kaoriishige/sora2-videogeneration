@@ -381,7 +381,7 @@ function Style() {
 
       /* Benefits */
       .benefit-item { display:flex; gap:30px; background:#161616; padding:45px; border-radius:32px; border:1px solid rgba(255,255,255,0.03); }
-      .b-num { font-size:56px; font-weight:900; color:rgba(202,138,4,0.15); line-height:0.8; }
+      .b-num { font-size:56px; font-weight:900; color:#ffffff; line-height:0.8; }
       .b-info h4 { font-size:22px; color:#ca8a04; margin-bottom:12px; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; }
       .b-info p { font-size:15px; color:rgba(255,255,255,0.5); font-weight:600; }
 
