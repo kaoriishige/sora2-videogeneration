@@ -166,7 +166,7 @@ export default function DiamondPortal() {
               <div className="b-num italic">01</div>
               <div className="b-info">
                 <h4>資材の安定供給と技術指導</h4>
-                <p>一次加盟店（ID:{refId}）から、プロ専用の特殊資材を直接供給。現場での施工指導も受けられるため、未経験からでも導入可能です。</p>
+                <p>一次加盟店（ID:{refId}）から、プロ専用の特殊資材を直接供給。現場での施工指導も受けられるため、未経験からでも導入可能。</p>
               </div>
             </div>
             <div className="benefit-item">
