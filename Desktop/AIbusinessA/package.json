@@ -1,0 +1,15 @@
+{
+  "name": "adtown-lp",
+  "version": "1.0.0",
+  "description": "AI business landing page with Stripe integration on Netlify",
+  "main": "script.js",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
