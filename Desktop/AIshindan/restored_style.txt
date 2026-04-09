@@ -1,0 +1,100 @@
+﻿  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI銇伕銇般倢銇亼銈屻伆銆佽〃绀恒仌銈屻仾銇勩€?| 鏍紡浼氱ぞadtown" />
+  <meta property="og:description" content="Google銉撱偢銉嶃偣銉椼儹銉曘偅銉笺儷閬嬬敤浠ｈ脳AI妞滅储瀵惧繙銈点偆銉堝埗浣溿仹銆丄I銇倐浜恒伀銈傞伕銇般倢銈嬩紒妤兓搴楄垪銇搞€? />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "鏍紡浼氱ぞadtown",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "329-2711",
+      "addressRegion": "鏍冩湪鐪?,
+      "addressLocality": "閭ｉ爤濉╁師甯?,
+      "streetAddress": "鐭虫灄698-35"
+    },
+    "description": "Google銉撱偢銉嶃偣銉椼儹銉曘偅銉笺儷閬嬬敤浠ｈ銆丄I妞滅储銇挤銇勩儧銉笺儬銉氥兗銈稿埗浣溿兓鏀逛慨鏀彺",
+    "areaServed": "鏃ユ湰"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "鏈綋銇垚鏋溿亴鍑恒仾銇勩仺杩藉姞璨荤敤銇亱銇嬨倞銇俱仜銈撱亱锛?,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "銇亜銆傝硣鏂欍伄鍐呭銇熀銇ャ亶銆佸熀婧栧€ゃ倰涓嬪洖銇ｃ仧鍫村悎銇垚鏋滃牨閰伅0鍐嗐仹銇欍€傘仌銈夈伀銆佸牨閰笂闄愩伅20,000鍐嗐伀瑷畾銇椼仸銇勩伨銇欍€?
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="announcement-bar">
+    <div class="container">
+      瀵捐薄 搴楄垪鍦板煙闆嗗銉撱偢銉嶃偣闄愬畾 / 銇濄倢浠ュ銇叏鍥介泦瀹伅蹇滅浉璜?    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a aria-label='鏍紡浼氱ぞadtown 銉堛儍銉椼伕' class='brand' href='/'>
+        <span class="brand-mark">ad</span>
+        <span class="brand-text">鏍紡浼氱ぞadtown</span>
+      </a>
+      <nav class="header-nav">
+        <a class='nav-link' href='/'>銉堛儍銉?/a>
+        <a class="btn btn-sm btn-primary" href="#entry">銉儑銉紒妤櫥閷诧紙姹烘笀銇革級</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== ERA SECTION ===== -->
+    <section id="era" class="era section">
+      <div class="container era-inner">
+        <div class="era-badge">THE NEW ERA OF SEARCH</div>
+        <h2 class="era-headline">妞滅储銇?span class="era-gradient">銆孉I锛婫oogle銉忋偆銉栥儶銉冦儔銆?/span>銇檪浠?/h2>
+      </div>
+    </section>
+
+    <!-- ===== AUTHORITY SECTION ===== -->
+    <section class="authority-section section-sm">
+      <div class="container">
+        <div class="authority-grid glass">
+          <div class="authority-header">
+            <h3>涓栫晫銈掔壗寮曘仚銈嬨儓銉冦儣銉兗銉€銉笺伅銆?br>鏃伀銆屾绱伄绲傘倧銈娿€嶃仺銆孉I銇銇俱倞銆嶃倰鏂█銇椼仸銇勩伨銇欍€?/h3>
+          </div>
+
+          <div class="ceo-quotes-grid">
+            <div class="ceo-card">
+              <img src="Microsoft%20CEO.png" class="ceo-photo" alt="Satya Nadella Microsoft CEO">
+              <div class="ceo-meta">
+                <strong>Satya Nadella</strong>
+                <span>Microsoft CEO</span>
+              </div>
+              <p class="ceo-quote">銆屾绱伄涓栫晫銇€佸疅銇?strong>30骞淬伓銈娿伀鈥滃啀鐧烘槑鈥?/strong>銇曘倢銇熴€侫I銇亾銈屻伨銇с伄浣撻〒銈掓牴搴曘亱銈夊銇堛仸銇椼伨銇嗐仩銈嶃亞銆傘€?/p>
+            </div>
+
+            <div class="ceo-card">
+              <img src="Google%20CEO.jpg" class="ceo-photo" alt="Sundar Pichai Google CEO">
+              <div class="ceo-meta">
+                <strong>Sundar Pichai</strong>
+                <span>Google CEO</span>
+              </div>

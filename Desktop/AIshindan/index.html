@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIに選ばれない店は、これから消える。 | 株式会社adtown</title>
+  <meta name="description" content="飲食店・美容室・サロン・整体・接骨院専門のAI集客支援。Google AI Mode・AI Overviews時代。Googleビジネスプロフィール運用、AI検索対応ホームページ制作、Instagram AI検索設計で、AIにも人にも選ばれる店へ。まずは無料診断。月額9,800円、各業界先着5社限定。" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AIに選ばれない店は、これから消える。 | 株式会社adtown" />
+  <meta property="og:description" content="世界のトップ企業が前提にしているAI検索時代。あなたの店がAIに選ばれる状態か、まずは無料診断で確認。" />
+  <meta property="og:locale" content="ja_JP" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#07101f;
+      --bg2:#0d1730;
+      --card:rgba(255,255,255,.08);
+      --card2:rgba(255,255,255,.05);
+      --line:rgba(255,255,255,.14);
+      --text:#eef4ff;
+      --muted:#b8c3dc;
+      --sub:#90a0c2;
+      --blue:#4da3ff;
+      --cyan:#35d5ff;
+      --yellow:#ffd34d;
+      --red:#ff5d5d;
+      --green:#38d39f;
+      --shadow:0 20px 60px rgba(0,0,0,.28);
+      --radius:22px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Inter","Noto Sans JP",system-ui,-apple-system,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(53,213,255,.12), transparent 22%),
+        radial-gradient(circle at 85% 15%, rgba(77,163,255,.16), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(255,93,93,.09), transparent 22%),
+        linear-gradient(180deg,#08101f 0%, #0a1223 42%, #0b1428 100%);
+      line-height:1.75;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 32px));margin-inline:auto}
+    .section{padding:88px 0}
+    .section-sm{padding:56px 0}
+    .center{text-align:center}
+
+    .glass{
+      background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));
+      backdrop-filter: blur(14px);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+      border-radius:999px;
+      color:#dbe7ff;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.04em;
+    }
+
+    .kicker{
+      display:inline-block;
+      color:var(--cyan);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    h1,h2,h3,h4,p{margin:0}
+    h1{
+      font-size:clamp(2.2rem,5vw,4.5rem);
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+    h2{
+      font-size:clamp(1.7rem,3.6vw,3rem);
+      line-height:1.18;
+      letter-spacing:-.02em;
+      margin-bottom:14px;
+    }
+    h3{
+      font-size:clamp(1.15rem,2vw,1.45rem);
+      line-height:1.35;
+      margin-bottom:12px;
+    }
+    .muted{color:var(--muted)}
+    .sub{color:var(--sub)}
+    .accent{
+      background:linear-gradient(90deg,#fff 0%,#87e8ff 48%,#4da3ff 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .danger{
+      color:#ffd1d1;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      background:rgba(7,16,31,.72);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .header-inner{
+      height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:.01em;
+    }
+    .brand-mark{
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,#4da3ff,#35d5ff);
+      color:#07101f;
+      font-weight:900;
+    }
+    .header-nav{
+      display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    }
+    .nav-link{
+      color:#d8e3fb;
+      font-size:14px;
+      padding:10px 12px;
+      border-radius:10px;
+    }
+    .nav-link:hover{background:rgba(255,255,255,.06)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 22px;
+      border-radius:14px;
+      font-weight:800;
+      transition:.25s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      background:linear-gradient(135deg,#4da3ff,#35d5ff);
+      color:#08101d;
+      box-shadow:0 16px 40px rgba(53,213,255,.24);
+    }
+    .btn-secondary{
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.16);
+      color:#ecf4ff;
+    }
+    .btn-danger{
+      background:linear-gradient(135deg,#ff8a5b,#ff5d5d);
+      color:white;
+      box-shadow:0 16px 40px rgba(255,93,93,.25);
+    }
+    .btn-block{width:100%}
+    .btn-sm{padding:11px 16px;font-size:14px}
+    .btn-lg{padding:16px 24px;font-size:16px}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:72px 0 56px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:start;
+    }
+    .hero-copy .lead{
+      font-size:clamp(1rem,1.7vw,1.22rem);
+      color:#dce8ff;
+      margin-top:22px;
+      max-width:760px;
+    }
+    .hero-alert{
+      margin-top:24px;
+      padding:16px 18px;
+      border-left:4px solid var(--red);
+      border-radius:16px;
+      background:rgba(255,93,93,.10);
+      color:#ffe9e9;
+      font-weight:700;
+    }
+    .hero-points{
+      margin-top:26px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .point{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .point strong{
+      display:block;
+      margin-bottom:8px;
+      color:#fff;
+      font-size:15px;
+    }
+    .point span{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+      display:block;
+    }
+    .cta-row{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+    .trust-inline{
+      margin-top:18px;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .trust-inline li{
+      font-size:13px;
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      color:#dce7fd;
+    }
+
+    .hero-panel{
+      padding:26px;
+    }
+    .hero-panel .top{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-start;
+      margin-bottom:18px;
+    }
+    .score-box{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+    }
+    .score-box strong{
+      display:block;
+      font-size:34px;
+      line-height:1;
+      margin-top:6px;
+    }
+    .score-box small{color:var(--sub)}
+    .mini-list{
+      display:grid;
+      gap:12px;
+      margin-top:8px;
+    }
+    .mini-item{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color:#dce7fd;
+    }
+    .mini-item span{color:var(--sub)}
+
+    .authority-wrap{
+      padding:30px;
+    }
+    .authority-head{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:16px;
+      align-items:end;
+      margin-bottom:24px;
+    }
+    .authority-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .authority-card{
+      padding:22px;
+      border-radius:20px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      display:flex;
+      flex-direction:column;
+      min-height:260px;
+    }
+    .avatar{
+      width:52px;height:52px;border-radius:50%;
+      display:grid;place-items:center;
+      font-weight:900;
+      color:#08101d;
+      margin-bottom:14px;
+    }
+    .a-google{background:linear-gradient(135deg,#8bd4ff,#e8f3ff)}
+    .a-ms{background:linear-gradient(135deg,#35d5ff,#4da3ff)}
+    .a-nv{background:linear-gradient(135deg,#98ff9b,#38d39f)}
+    .a-official{background:linear-gradient(135deg,#ffd34d,#ffb84d)}
+
+    .person{
+      font-size:15px;
+      font-weight:800;
+      color:#fff;
+    }
+    .role{
+      color:#9eb2d8;
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    .quote{
+      color:#eef4ff;
+      font-weight:700;
+      line-height:1.7;
+      font-size:15px;
+      margin-bottom:10px;
+    }
+    .quote-en{
+      color:#c6d6f4;
+      font-size:13px;
+      line-height:1.7;
+      margin-bottom:14px;
+    }
+    .source-link{
+      margin-top:auto;
+      color:#86dfff;
+      font-size:13px;
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+
+    .shift-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:24px;
+    }
+    .shift-card{
+      padding:24px;
+      border-radius:22px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+    }
+    .shift-card ul{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:#d9e6ff;
+    }
+
+    .crisis-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:28px;
+    }
+    .crisis-card{
+      padding:24px;
+      border-radius:20px;
+      background:linear-gradient(180deg,rgba(255,93,93,.10),rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.1);
+    }
+    .crisis-card .num{
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.08);
+      margin-bottom:12px;
+      font-weight:800;
+    }
+    .crisis-card p{color:#d7e4ff;font-size:14px}
+
+    .diagnosis{
+      padding:34px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:start;
+    }
+    .checklist{
+      display:grid;
+      gap:14px;
+      margin-top:20px;
+    }
+    .check{
+      padding:16px 18px;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      color:#e8f1ff;
+    }
+    .steps{
+      display:grid;
+      gap:14px;
+    }
+    .step{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.09);
+    }
+    .step b{
+      display:inline-flex;
+      margin-bottom:8px;
+      color:var(--cyan);
+    }
+
+    .pricing-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+    .price-card{
+      padding:28px;
+      border-radius:24px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      position:relative;
+      overflow:hidden;
+    }
+    .price-card.featured{
+      background:linear-gradient(180deg,rgba(77,163,255,.14),rgba(255,255,255,.05));
+      border-color:rgba(77,163,255,.32);
+    }
+    .price{
+      font-size:14px;
+      color:#bfd0ef;
+      margin-top:8px;
+      margin-bottom:12px;
+    }
+    .price strong{
+      display:block;
+      font-size:38px;
+      color:#fff;
+      line-height:1.1;
+      margin-top:4px;
+    }
+    .price-card ul{
+      margin:14px 0 0;
+      padding-left:18px;
+      color:#d9e6ff;
+    }
+
+    .rule-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:24px;
+    }
+    .rule-card{
+      padding:24px;
+      border-radius:22px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .rule-tag{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.14em;
+      color:var(--yellow);
+      margin-bottom:10px;
+    }
+    .metric-table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:16px;
+      overflow:hidden;
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .metric-table th,
+    .metric-table td{
+      padding:12px 14px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      text-align:left;
+      font-size:14px;
+    }
+    .metric-table th{color:#b9c9e8}
+    .metric-table tr:last-child td{border-bottom:none}
+
+    .note-box{
+      margin-top:22px;
+      padding:22px;
+      border-radius:20px;
+      background:rgba(53,213,255,.08);
+      border:1px solid rgba(53,213,255,.18);
+      color:#e8f8ff;
+    }
+
+    .compare-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:28px;
+    }
+    .compare-card{
+      padding:26px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.1);
+    }
+    .compare-old{
+      background:rgba(255,255,255,.04);
+    }
+    .compare-new{
+      background:linear-gradient(180deg,rgba(53,213,255,.12),rgba(255,255,255,.04));
+      border-color:rgba(53,213,255,.22);
+    }
+    .compare-card ul{
+      margin:14px 0 0;
+      padding-left:18px;
+      color:#dce7fd;
+    }
+
+    .faq-list{
+      display:grid;
+      gap:14px;
+      margin-top:24px;
+    }
+    details{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.05);
+      overflow:hidden;
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      padding:20px 22px;
+      font-weight:800;
+      color:#fff;
+    }
+    details p{
+      padding:0 22px 20px;
+      color:#d6e4ff;
+    }
+
+    .entry-wrap{
+      padding:36px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+    .entry-points{
+      margin:18px 0 0;
+      padding-left:18px;
+      color:#d9e6ff;
+    }
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    label{
+      display:block;
+      font-size:14px;
+      color:#deebff;
+    }
+    label span{
+      display:block;
+      margin-bottom:8px;
+      font-weight:700;
+    }
+    input,select,textarea{
+      width:100%;
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      padding:14px 16px;
+      font:inherit;
+      outline:none;
+    }
+    input::placeholder,textarea::placeholder{color:#9fb0cf}
+    textarea{resize:vertical;min-height:120px}
+    .consent{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      margin-top:14px;
+      color:#cfdcf7;
+      font-size:13px;
+    }
+    .consent input{
+      width:18px;height:18px;flex:none;margin-top:3px;
+    }
+    .form-note{
+      margin-top:14px;
+      color:#9fb0cf;
+      font-size:13px;
+    }
+    .form-message{
+      font-size:14px;
+      color:#9ff3cc;
+      margin-top:12px;
+    }
+
+    .sources{
+      margin-top:24px;
+      display:grid;
+      gap:10px;
+    }
+    .sources a{
+      color:#93e2ff;
+      text-decoration:underline;
+      text-underline-offset:2px;
+      word-break:break-word;
+    }
+
+    .footer{
+      padding:34px 0 56px;
+      color:#98abd0;
+      font-size:13px;
+    }
+
+    .mobile-cta{
+      position:fixed;
+      inset:auto 14px 14px 14px;
+      z-index:55;
+      display:none;
+    }
+
+    @media (max-width: 1080px){
+      .hero-grid,
+      .diagnosis,
+      .entry-wrap,
+      .compare-wrap{
+        grid-template-columns:1fr;
+      }
+      .authority-grid,
+      .pricing-grid,
+      .rule-grid,
+      .shift-grid,
+      .crisis-grid,
+      .hero-points{
+        grid-template-columns:repeat(2,1fr);
+      }
+      .company-grid{
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px){
+      .header-nav .nav-link{display:none}
+      .section{padding:68px 0}
+      .authority-grid,
+      .pricing-grid,
+      .rule-grid,
+      .shift-grid,
+      .crisis-grid,
+      .hero-points,
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+      .authority-wrap,
+      .hero-panel,
+      .entry-wrap,
+      .diagnosis{
+        padding:22px;
+      }
+      .mobile-cta{display:block}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"株式会社adtown",
+    "address":{
+      "@type":"PostalAddress",
+      "postalCode":"329-2711",
+      "addressRegion":"栃木県",
+      "addressLocality":"那須塩原市",
+      "streetAddress":"石林698-35"
+    },
+    "description":"Googleビジネスプロフィール運用代行、AI検索対応ホームページ制作・改修、Instagram AI検索設計、口コミ・信頼設計支援",
+    "areaServed":"日本"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"なぜ今すぐ対応しないといけないのですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"GoogleはAI OverviewsやAI Modeを拡大しており、検索は一覧比較からAIによる推薦に移行しています。今のうちに情報整備を進めた店舗ほど有利です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"成果が出ない月でも追加費用はかかりますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"基準値を下回る月の成果報酬は0円です。請求上限は月30,000円です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"何を見て成果を判断しますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Googleビジネスプロフィールで確認できる電話、ルート検索、ウェブサイトクリックを基準に判断します。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="株式会社adtown">
+        <span class="brand-mark">ad</span>
+        <span>株式会社adtown</span>
+      </a>
+      <nav class="header-nav">
+        <a class="nav-link" href="#authority">世界のトップはどう見ているか</a>
+        <a class="nav-link" href="#pricing">料金</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="btn btn-sm btn-danger" href="#diagnosis-form">無料診断を申し込む</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="kicker" style="display:block;">AI集客支援サービス</div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: var(--cyan); margin-bottom: 16px; letter-spacing: 0.05em; border-left: 4px solid var(--cyan); padding-left: 12px;">
+            飲食店・美容室・サロン・整体・接骨院 専門
+          </div>
+          <span class="badge">各業界 先着5社限定 / 月額9,800円 / まずは無料診断</span>
+          <h1>AIに選ばれない店は、<br><span class="accent">存在しないのと同じです。</span></h1>
+          <p class="lead">
+            Instagramは<strong>AI検索型アルゴリズムへ進化しています。</strong><br>
+            これからは<strong>"投稿する"ではなく"検索で選ばれる設計"</strong>が必要です。
+          </p>
+          <p class="lead">
+            ハッシュタグだけでは伸びない。バズ投稿でも売上につながらない。<br>
+            検索ワードに入らないと見られない。<br>
+            <strong>「検索で選ばれない＝存在しない」時代</strong>に入っています。
+          </p>
+          <p class="lead">
+            もう、検索結果にただ並ぶだけでは足りません。<br>
+            これからは<strong>AIが「この店がおすすめ」と指名する時代</strong>です。<br>
+            Googleビジネスプロフィール、公式ホームページ、Instagram。<br>
+            この<strong>3つすべてがAI検索に最適化されていない店は、</strong>
+            <strong class="danger">比較候補から外れ始めています。</strong>
+          </p>
+
+          <div class="hero-alert">
+            オーナー様へ。<br>
+            今この瞬間も、AIは「どの店を出すか」を学習しています。<br>
+            何もしない店は、1年後に集客でも求人でも不利になります。
+          </div>
+
+          <div class="hero-points">
+            <div class="point">
+              <strong>GBPが古い</strong>
+              <span>Googleビジネスプロフィールの営業時間・写真・投稿が止まっていると、AIは推薦できません。</span>
+            </div>
+            <div class="point">
+              <strong>HPが弱い</strong>
+              <span>公式ホームページとGBPの内容が噛み合わないと、AI検索で不利になります。</span>
+            </div>
+            <div class="point">
+              <strong>Instagramが未対応</strong>
+              <span>ハッシュタグ頼みの投稿では、AI検索型アルゴリズムに選ばれません。</span>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a href="#diagnosis-form" class="btn btn-lg btn-danger">無料診断を受ける</a>
+            <a href="#authority" class="btn btn-lg btn-secondary">なぜ今急ぐべきかを見る</a>
+          </div>
+
+          <ul class="trust-inline" aria-label="安心材料">
+            <li>Googleビジネスプロフィール運用代行</li>
+            <li>AI検索対応ホームページ制作</li>
+            <li>Instagram AI検索設計</li>
+            <li>口コミ・信頼設計</li>
+            <li>成果が出ない月の成果報酬は0円</li>
+            <li>請求上限は月30,000円</li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel glass">
+          <div class="top">
+            <div>
+              <span class="kicker">FREE DIAGNOSIS</span>
+              <h3>あなたの店、<br>AIに選ばれる状態ですか？</h3>
+            </div>
+            <div class="score-box">
+              <small>診断項目</small>
+              <strong>4軸</strong>
+            </div>
+          </div>
+
+          <div class="mini-list">
+            <div class="mini-item">
+              <b>GBP</b>
+              <span>Googleビジネスプロフィールの鮮度・整備</span>
+            </div>
+            <div class="mini-item">
+              <b>Website</b>
+              <span>公式ホームページのAI検索対応</span>
+            </div>
+            <div class="mini-item">
+              <b>Instagram</b>
+              <span>AI検索型アルゴリズムへの対応状況</span>
+            </div>
+            <div class="mini-item">
+              <b>Consistency</b>
+              <span>GBP・HP・Instagramの情報一致</span>
+            </div>
+            <div class="mini-item">
+              <b>Metrics</b>
+              <span>電話・ルート・サイトクリック</span>
+            </div>
+          </div>
+
+          <div class="note-box">
+            Googleビジネスプロフィール、公式ホームページ、Instagramの<strong>3つの柱</strong>を横断的に診断。<br>
+            「なんとなく良くなった」ではなく、公式数値と検索露出で見ます。
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="authority" class="section-sm">
+      <div class="container">
+        <div class="authority-wrap glass">
+          <div class="authority-head">
+            <div style="max-width: 760px;">
+              <span class="kicker">AUTHORITY</span>
+              <div style="margin: 16px 0 32px;">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; border: 1px solid rgba(255,255,255,.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,.4);">
+                  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/irDDq6jWkX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+              <h2>これは弊社の意見ではありません。<br><span class="accent">世界のトップは、もうAI前提で動いています。</span></h2>
+              <p class="muted">オーナー様が信じるべきなのは、営業トークではなく、世界のプラットフォーマーとトップCEOの一次情報です。</p>
+            </div>
+            <a href="#diagnosis-form" class="btn btn-primary">無料診断で現状確認する</a>
+          </div>
+
+          <div class="authority-grid">
+            <article class="authority-card">
+              <img src="Google CEO.jpg" alt="Sundar Pichai" class="avatar" style="object-fit: cover;" />
+              <div class="person">Sundar Pichai</div>
+              <div class="role">Google / Alphabet CEO</div>
+              <p class="quote">AIは「一生に一度」の技術転換。</p>
+              <p class="quote-en">“AI is a once in a lifetime technology.”</p>
+              <p class="sub">さらにGoogle CEOは、AIはPCやモバイル以上に大きな変化になり、インターネット以上に情報アクセスを民主化すると述べています。</p>
+              <a class="source-link" href="https://blog.google/innovation-and-ai/products/sundar-pichai-ai-action-summit/" target="_blank" rel="noopener">出典を見る</a>
+            </article>
+
+            <article class="authority-card">
+              <img src="Microsoft CEO.png" alt="Satya Nadella" class="avatar" style="object-fit: cover;" />
+              <div class="person">Satya Nadella</div>
+              <div class="role">Microsoft CEO</div>
+              <p class="quote">AIは、最大カテゴリである「検索」から、あらゆるソフトウェアを変える。</p>
+              <p class="quote-en">“AI will fundamentally change every software category, starting with the largest category of all – search.”</p>
+              <p class="sub">つまり、検索が変わるのは一過性ではなく、ビジネスの入口そのものが変わるということです。</p>
+              <a class="source-link" href="https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/" target="_blank" rel="noopener">出典を見る</a>
+            </article>
+
+            <article class="authority-card">
+              <img src="NVIDIA CEO.jpg" alt="Jensen Huang" class="avatar" style="object-fit: cover;" />
+              <div class="person">Jensen Huang</div>
+              <div class="role">NVIDIA CEO</div>
+              <p class="quote">AIは、もはや一機能ではなく「インフラ」。すべての会社が使う。</p>
+              <p class="quote-en">“AI is no longer a single breakthrough or application — it is essential infrastructure. Every company will use it.”</p>
+              <p class="sub">AIを使うかどうか、ではありません。これからは、AIに理解される会社だけが残ります。</p>
+              <a class="source-link" href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">出典を見る</a>
+            </article>
+
+            <article class="authority-card">
+              <img src="OpenAICEO.png" alt="Sam Altman" class="avatar" style="object-fit: cover;" />
+              <div class="person">Sam Altman</div>
+              <div class="role">OpenAI CEO</div>
+              <p class="quote">我々は「知能の時代」への入り口に立っている。</p>
+              <p class="quote-en">“We are at the beginning of the Intelligence Age.”</p>
+              <p class="sub">AIが日常的な推論をこなすことでビジネスは一変し、情報を適切に整理・提供できるかが生き残りの鍵になると予測されています。</p>
+              <a class="source-link" href="https://openai.com/index/the-intelligence-age/" target="_blank" rel="noopener">出典を見る</a>
+            </article>
+
+            <article class="authority-card">
+              <img src="MetaCEO.jpg" alt="Mark Zuckerberg" class="avatar" style="object-fit: cover;" />
+              <div class="person">Mark Zuckerberg</div>
+              <div class="role">Meta CEO</div>
+              <p class="quote">今後、すべてのビジネスが独自のAIエージェントを持つようになる。</p>
+              <p class="quote-en">“Every business is going to have an AI agent.”</p>
+              <p class="sub">企業がウェブページを持つのが当たり前になったように、近い将来、AIが企業の「顔」として顧客と対話し、選ばれる理由を伝えるインフラになると予測しています。</p>
+              <a class="source-link" href="https://about.fb.com/news/" target="_blank" rel="noopener">出典を見る</a>
+            </article>
+
+            <article class="authority-card">
+              <img src="google-logo.jpg" alt="Google公式発表" class="avatar" style="object-fit: cover;" />
+              <div class="person">Google公式発表</div>
+              <div class="role">AI Overviews / AI Mode</div>
+              <p class="quote">Google検索そのものが、AI応答・比較・深掘り前提へ進化。</p>
+              <p class="quote-en">AI Mode is particularly helpful for exploration, comparisons and nuanced follow-up questions.</p>
+              <p class="sub">Googleは、AI Overviewsが10億人超に使われ、AI Modeで複雑比較や深い探索を支援すると説明しています。</p>
+              <a class="source-link" href="https://blog.google/products-and-platforms/products/search/ai-mode-search/" target="_blank" rel="noopener">出典を見る</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="center">
+          <span class="kicker">WHAT HAS CHANGED</span>
+          <h2>もう「検索順位だけ」では、<span class="accent">勝てません。</span></h2>
+          <p class="muted">AI時代に強い店は、単に順位が高い店ではなく、Googleビジネスプロフィール・公式ホームページ・InstagramすべてがAIに最適化された店です。</p>
+        </div>
+
+        <div class="compare-wrap">
+          <article class="compare-card compare-old glass">
+            <h3>従来のGoogle検索</h3>
+            <ul>
+              <li>一覧で比較される</li>
+              <li>広告や競合に埋もれやすい</li>
+              <li>ユーザーが自分で比較する</li>
+              <li>情報が少なくても、順位だけで多少戦えた</li>
+            </ul>
+          </article>
+
+          <article class="compare-card compare-new glass">
+            <h3>AI検索・AI Mode時代</h3>
+            <ul>
+              <li>AIが「この店・会社が良い」と要約・推薦する</li>
+              <li>Google検索もInstagramもAI検索型に進化</li>
+              <li>GBP・公式HP・Instagramの情報の一貫性が重要</li>
+              <li>ハッシュタグだけでは伸びない、検索設計が必要</li>
+              <li>AIに理解されない店は、候補に出にくくなる</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="shift-grid">
+          <article class="shift-card">
+            <h3>Google検索の変化</h3>
+            <p class="muted">AI Overviews / AI Modeでは、<strong>有益な本文・構造化データ・最新のBusiness Profile情報</strong>が重要。特別な裏技ではなく、基本を厳密に整えることが必要です。</p>
+          </article>
+          <article class="shift-card">
+            <h3>Instagramの変化</h3>
+            <p class="muted">InstagramはAI検索型アルゴリズムへ進化。<strong>ハッシュタグだけでは伸びず、バズ投稿でも売上につながらない。</strong>検索ワードに入らないと見られない時代です。</p>
+          </article>
+          <article class="shift-card">
+            <h3>3つの柱の連携</h3>
+            <p class="muted">Googleビジネスプロフィール・公式ホームページ・Instagramの<strong>情報が一致し、AI検索に最適化されている店</strong>だけが選ばれます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="center">
+          <span class="kicker">CRISIS</span>
+          <h2>このまま放置すると、<span class="accent">起こること</span></h2>
+          <p class="muted">「うちは腕がいいから大丈夫」は危険です。AIは、腕ではなく、GBP・公式HP・Instagramの見える証拠と整った情報で判断します。</p>
+        </div>
+
+        <div class="crisis-grid">
+          <article class="crisis-card">
+            <div class="num">01</div>
+            <h3>Google検索で落ちる</h3>
+            <p>GBPの口コミが少ない、写真が古い、公式HPと情報が噛み合わないだけで、AI推薦の候補から外れます。</p>
+          </article>
+          <article class="crisis-card">
+            <div class="num">02</div>
+            <h3>Instagramで埋もれる</h3>
+            <p>ハッシュタグ頼みの投稿ではAI検索に引っかからず、バズっても売上につながりません。</p>
+          </article>
+          <article class="crisis-card">
+            <div class="num">03</div>
+            <h3>競合に先回りされる</h3>
+            <p>GBP・HP・InstagramすべてのAI対応を先に始めた競合が、地域の代表候補として蓄積されます。</p>
+          </article>
+          <article class="crisis-card">
+            <div class="num">04</div>
+            <h3>後から巻き返しが難しい</h3>
+            <p>AIは継続的に蓄積されたGBP・HP・Instagramの整合データを評価するため、出遅れは重いです。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagnosis" class="section">
+      <div class="container">
+        <div class="diagnosis glass">
+          <div>
+            <span class="kicker">FREE DIAGNOSIS</span>
+            <h2>だから最初は、<span class="accent">申込ではなく無料診断</span>です。</h2>
+            <p class="muted">
+              いきなり契約の話ではありません。<br>
+              まずは、あなたの店や会社が「AIに選ばれる状態か」を可視化します。
+            </p>
+
+            <div class="checklist">
+              <div class="check"><strong>診断 1：</strong> Googleビジネスプロフィールの鮮度・整備状況は十分か</div>
+              <div class="check"><strong>診断 2：</strong> 公式ホームページがAI検索に対応した文章構造になっているか</div>
+              <div class="check"><strong>診断 3：</strong> InstagramがAI検索型アルゴリズムに対応した設計になっているか</div>
+              <div class="check"><strong>診断 4：</strong> GBP・公式HP・Instagramの情報が一致しているか</div>
+              <div class="check"><strong>診断 5：</strong> 口コミ・写真・強みが「証拠」として見えるか</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="steps">
+              <div class="step">
+                <b>STEP 1</b>
+                <h3>無料で現状確認</h3>
+                <p class="muted">Googleビジネスプロフィール・公式ホームページ・Instagramの3軸を横断診断します。</p>
+              </div>
+              <div class="step">
+                <b>STEP 2</b>
+                <h3>危険箇所を共有</h3>
+                <p class="muted">「何が原因でAIに選ばれにくいか」を、オーナー様にもわかる言葉で説明します。</p>
+              </div>
+              <div class="step">
+                <b>STEP 3</b>
+                <h3>必要なら導入判断</h3>
+                <p class="muted">納得いただけた場合のみ、運用代行やサイト対応をご案内します。</p>
+              </div>
+            </div>
+
+            <div class="note-box">
+              営業トークではなく、<strong>Google公式指標とInstagramインサイト</strong>を基準に話します。<br>
+              GBPの電話・ルート検索・サイトクリック、Instagramの検索露出を基準値と比較します。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="center">
+          <span class="kicker">PRICING</span>
+          <h2>料金を隠しません。<span class="accent">最初から全部見せます。</span></h2>
+          <p class="muted">「結局いくらなのか分からない」は、信頼を壊します。だから価格も条件も先に出します。</p>
+        </div>
+
+        <div class="compare-wrap" style="margin-top: 36px; margin-bottom: 36px; align-items: stretch;">
+          <div style="padding: 28px; border-radius: 22px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); display: flex; flex-direction: column; justify-content: center;">
+            <div style="font-size: 12px; font-weight: 800; letter-spacing: .14em; color: var(--sub); margin-bottom: 12px;">一般的なLLMOコンサル（AI検索対策）</div>
+            <div style="font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; color: var(--red); line-height: 1.2;">月額 10万円〜100万円<span style="font-size: 0.6em; color: var(--sub);">以上</span></div>
+            <p style="margin-top: 10px; color: var(--sub); font-size: 14px; line-height: 1.6;">大手向け・高額で導入ハードルが高い</p>
+          </div>
+          <div style="padding: 28px; border-radius: 22px; background: linear-gradient(180deg, rgba(53,213,255,.12), rgba(77,163,255,.06)); border: 1px solid rgba(53,213,255,.28); display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
+            <div style="font-size: 12px; font-weight: 800; letter-spacing: .14em; color: var(--cyan); margin-bottom: 12px;">しかし私たちは——</div>
+            <div style="font-size: 14px; color: var(--muted); margin-bottom: 6px;">店舗向けに最適化し</div>
+            <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; line-height: 1.2;">
+              <span style="background: linear-gradient(90deg, #fff, #87e8ff, #4da3ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">月額 9,800円</span><span style="font-size: 0.5em; color: var(--muted);">から</span>
+            </div>
+            <p style="margin-top: 10px; color: #b8ecff; font-size: 14px; line-height: 1.6;">店舗に必要な3軸AI対応を、始めやすい価格で。</p>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card featured">
+            <div class="badge">人気 / 各業種先着5社</div>
+            <h3 style="margin-top:16px;">GBP・HP・Instagram 3軸AI対応</h3>
+            <div class="price">モデル事業基本料金<strong>月額 9,800円</strong></div>
+            <ul>
+              <li>地域集客エリア、業種ごとで先着5店舗で終了</li>
+              <li>Googleビジネスプロフィール投稿更新・整備</li>
+              <li>口コミ返信最適化</li>
+              <li>Instagram AI検索設計アドバイス</li>
+              <li>AIが読みやすい状態へ3軸を整備</li>
+            </ul>
+          </article>
+
+          <article class="price-card">
+            <h3>AI検索対応ホームページ制作</h3>
+            <div class="price">ホームページ未保有なら<strong>無料作成</strong></div>
+            <ul>
+              <li>AI検索を意識した構成</li>
+              <li>Googleビジネスプロフィールと整合</li>
+              <li>スマホ最適化</li>
+              <li>来店・問い合わせ導線設計</li>
+            </ul>
+            <div style="margin-top: 16px; font-size: 0.85rem; color: var(--sub); line-height: 1.6;">
+              ※無料制作の場合は、データをすべて準備することが条件です。<br>
+              ※準備ができない場合は、制作費30,000円〜50,000円の費用がかかります。
+            </div>
+          </article>
+
+          <article class="price-card">
+            <h3>既存サイト向けAI検索コード提供</h3>
+            <div class="price">既存サイトを活かす<strong>20,000円</strong></div>
+            <ul>
+              <li>ホームページ制作会社の修正料金は含みません。</li>
+              <li>既存制作会社に渡せる形で提供</li>
+              <li>構造化・文脈・導線を改善</li>
+              <li>作り直しなしでAI対応を強化</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="center" style="margin-top: 56px; margin-bottom: 8px;">
+          <h2>成果報酬内容</h2>
+          <p class="muted">月額固定費に加えて、成果が出た分だけお支払いいただく仕組みです。</p>
+        </div>
+
+        <div class="rule-grid">
+          <article class="rule-card">
+            <span class="rule-tag">RULE 1</span>
+            <h3>基準値を先に固定</h3>
+            <p class="muted">契約前に、直近3ヶ月平均を「基準値」として決めます。後から都合よく変えません。</p>
+            <table class="metric-table">
+              <thead>
+                <tr>
+                  <th>指標</th>
+                  <th>単価</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>電話</td>
+                  <td><strong>500円 / 件</strong></td>
+                </tr>
+                <tr>
+                  <td>ルート検索</td>
+                  <td><strong>300円 / 件</strong></td>
+                </tr>
+                <tr>
+                  <td>ウェブサイト閲覧</td>
+                  <td><strong>200円 / 件</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="rule-card">
+            <span class="rule-tag">RULE 2</span>
+            <h3>増えた分にだけ課金</h3>
+            <p class="muted">当月の数値から基準値を引き、増えた分にだけ単価を掛けます。基準を下回る月の成果報酬は<strong>0円</strong>です。</p>
+            <div class="note-box">
+              成果報酬額 = （今月の数値 − 基準値）× 単価
+            </div>
+          </article>
+
+          <article class="rule-card">
+            <span class="rule-tag">RULE 3</span>
+            <h3>請求上限は月30,000円</h3>
+            <p class="muted">どれだけ成果が出ても、月々の請求は上限30,000円。成果が伸びた分を青天井で請求することはありません。</p>
+            <div class="note-box">
+              月額固定費 + 成果報酬込みで、<strong>最大30,000円</strong>まで
+            </div>
+          </article>
+        </div>
+
+        <div class="note-box">
+          使う数字は、業者独自の都合のいいレポートではなく、<strong>Googleビジネスプロフィールの公式数値とInstagramインサイト</strong>です。
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="center">
+          <span class="kicker">WHY OWNERS MOVE NOW</span>
+          <h2>オーナーが今動く理由は、<span class="accent">「安いから」ではありません。</span></h2>
+          <p class="muted">今動く店だけが、GBP・公式HP・InstagramのAI学習データを先に積み上げられるからです。</p>
+        </div>
+
+        <div class="compare-wrap">
+          <article class="compare-card compare-new glass">
+            <h3>今、始める店</h3>
+            <ul>
+              <li>GBP・HP・Instagramの3軸でデータが積み上がる</li>
+              <li>AIに読み取られやすい文章と構造へ修正できる</li>
+              <li>InstagramでもAI検索で上位表示される設計ができる</li>
+              <li>地域で先に指名されるポジションを取りやすい</li>
+              <li>集客でも求人でも優位を作りやすい</li>
+            </ul>
+          </article>
+
+          <article class="compare-card compare-old glass">
+            <h3>1年後に動く店</h3>
+            <ul>
+              <li>競合がGBP・HP・Instagramすべてで先にAI資産を蓄積</li>
+              <li>Google検索でもInstagram検索でも候補に入りにくい</li>
+              <li>後追いで広告費や手間が増えやすい</li>
+              <li>「なぜ選ばれないか」が見えにくい</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="center">
+          <span class="kicker">FAQ</span>
+          <h2>よくある質問</h2>
+        </div>
+
+        <div class="faq-list">
+          <details open>
+            <summary>なぜ、いま対応しないと危ないのですか？</summary>
+            <p>GoogleはAI OverviewsとAI Modeを拡大し、InstagramもAI検索型アルゴリズムへ進化しています。GBP・公式HP・Instagramの3つの柱を今のうちに整えた店ほど有利です。</p>
+          </details>
+
+          <details>
+            <summary>まず契約しないといけませんか？</summary>
+            <p>いいえ。最初は無料診断です。現状を見て、必要性を感じた場合のみご判断ください。</p>
+          </details>
+
+          <details>
+            <summary>何を成果として見るのですか？</summary>
+            <p>Googleビジネスプロフィールの電話・ルート検索・ウェブサイトクリックを基準に見ます。</p>
+          </details>
+
+          <details>
+            <summary>成果が出ない月はどうなりますか？</summary>
+            <p>基準値を下回る月の成果報酬は0円です。請求上限は月30,000円です。</p>
+          </details>
+
+          <details>
+            <summary>ホームページがなくても大丈夫ですか？</summary>
+            <p>
+              はい。ホームページ未保有の場合は、AI検索対応ページを無料作成する前提でご案内できます。<br>
+              <span style="display: block; margin-top: 8px; font-size: 0.9em; opacity: 0.8;">
+                ※無料制作の場合は、データをすべて準備することが条件です。<br>
+                ※準備ができない場合は、制作費30,000円〜50,000円の費用がかかります。
+              </span>
+            </p>
+          </details>
+
+          <details>
+            <summary>既存サイトがある場合は？</summary>
+            <p>既存サイト向けに、制作会社へ渡せるAI検索対応コードを20,000円で提供できます。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="entry-wrap glass">
+          <div>
+            <span class="kicker">ENTRY</span>
+            <h2>「うちは大丈夫か？」と少しでも思ったら、<br><span class="accent">まず無料診断</span>を受けてください。</h2>
+            <p class="muted">
+              本当に危ないのは、問題があることではありません。<br>
+              問題があるのに、気づかないまま放置することです。
+            </p>
+            <ul class="entry-points">
+              <li>Googleビジネスプロフィールの現状を確認</li>
+              <li>公式ホームページのAI検索対応度を確認</li>
+              <li>InstagramのAI検索設計状況を確認</li>
+              <li>3軸で「なぜAIに選ばれにくいか」を可視化</li>
+              <li>必要なら改善案と費用を明示</li>
+            </ul>
+
+            <div class="sources">
+              <strong>一次情報ソース</strong>
+              <a href="https://blog.google/products-and-platforms/products/search/ai-mode-search/" target="_blank" rel="noopener">Google公式：AI Mode / AI Overviews</a>
+              <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google Search Central：AI Features and Your Website</a>
+              <a href="https://support.google.com/business/answer/9918094?hl=en" target="_blank" rel="noopener">Google Help：Business Profile Performance</a>
+              <a href="https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/" target="_blank" rel="noopener">Microsoft：Satya Nadella発言</a>
+              <a href="https://blog.google/innovation-and-ai/products/sundar-pichai-ai-action-summit/" target="_blank" rel="noopener">Google Blog：Sundar Pichai発言</a>
+              <a href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026" target="_blank" rel="noopener">NVIDIA：Jensen Huang発言</a>
+            </div>
+          </div>
+
+          <div>
+            <form id="diagnosis-form" action="https://ssgform.com/s/3TQ1jL8kw53N" method="post" novalidate>
+              <div class="form-grid">
+                <label>
+                  <span>お名前 <em>必須</em></span>
+                  <input type="text" name="name" placeholder="例：山田 太郎" required />
+                </label>
+
+                <label>
+                  <span>店舗名・会社名 <em>必須</em></span>
+                  <input type="text" name="shop" placeholder="例：○○美容室" required />
+                </label>
+
+                <label>
+                  <span>メールアドレス <em>必須</em></span>
+                  <input type="email" name="email" placeholder="example@domain.com" required />
+                </label>
+
+                <label>
+                  <span>電話番号</span>
+                  <input type="tel" name="tel" placeholder="090-1234-5678" />
+                </label>
+
+                <label>
+                  <span>業種</span>
+                  <select name="industry">
+                    <option value="" style="color:#000;">選択してください</option>
+                    <option value="飲食店" style="color:#000;">飲食店</option>
+                    <option value="美容室・サロン" style="color:#000;">美容室・サロン</option>
+                    <option value="整体・接骨院" style="color:#000;">整体・接骨院</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span>ホームページの有無</span>
+                  <select name="website">
+                    <option style="color:#000;">持っていない</option>
+                    <option style="color:#000;">持っている</option>
+                    <option style="color:#000;">わからない</option>
+                  </select>
+                </label>
+              </div>
+
+              <label style="margin-top:14px;">
+                <span>相談したいこと</span>
+                <textarea name="message" placeholder="例：Googleビジネスプロフィールの状態を見てほしい、Instagramの検索対策を相談したい、ホームページ無料作成について聞きたい、など"></textarea>
+              </label>
+
+              <label class="consent">
+                <input type="checkbox" required />
+                <span><a href="privacy.html#consent" target="_blank" style="text-decoration: underline;">個人情報の取扱規定</a>に同意し、無料診断の結果をもとに必要な改善提案を受けることに同意します。</span>
+              </label>
+
+
+              <div class="form-note">
+                ※このフォームは「無料診断申込」です。いきなり課金・決済には進みません。
+              </div>
+
+              <button type="submit" class="btn btn-lg btn-danger btn-block" style="margin-top:16px;">無料診断を申し込む</button>
+              <p class="form-message" id="formMessage" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container center" style="padding: 40px 0 20px;">
+      <p style="font-size: 16px; font-weight: bold;">
+        <a href="https://adtown9800.netlify.app/" style="color: #93e2ff; text-decoration: underline; text-underline-offset: 4px;">無料診断は受けずに、すぐ申し込む方は、こちらから</a>
+      </p>
+    </div>
+
+
+    <section id="company" class="section">
+      <div class="container">
+        <div class="glass" style="padding: 40px;">
+          <div class="center" style="margin-bottom: 32px;">
+            <span class="kicker">COMPANY</span>
+            <h2>運営会社</h2>
+          </div>
+          
+          <div style="max-width: 900px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-bottom: 48px; text-align: center; font-weight: 500;">
+              創業から20年、地域の集客を支え続けてきた広告代理店としての知見を、AI検索時代の新たな基準で提供。AIと人、その両方に選ばれる店舗運営を徹底サポートいたします。
+            </p>
+
+            <div class="company-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px;">
+              <div>
+                <h3 style="border-left: 4px solid var(--cyan); padding-left: 12px; margin-bottom: 20px;">会社概要</h3>
+                <table class="metric-table" style="background: none; border: none;">
+                  <tbody>
+                    <tr>
+                      <th style="width: 120px; white-space: nowrap; border-color: rgba(255,255,255,.05);">会社名</th>
+                      <td style="border-color: rgba(255,255,255,.05);">株式会社adtown</td>
+                    </tr>
+                    <tr>
+                      <th style="border-color: rgba(255,255,255,.05);">代表取締役</th>
+                      <td style="border-color: rgba(255,255,255,.05);">石下 かをり</td>
+                    </tr>
+                    <tr>
+                      <th style="border-color: rgba(255,255,255,.05);">所在地</th>
+                      <td style="border-color: rgba(255,255,255,.05);">〒329-2711 栃木県那須塩原市石林698-35</td>
+                    </tr>
+                    <tr>
+                      <th style="border-color: rgba(255,255,255,.05);">法人番号</th>
+                      <td style="border-color: rgba(255,255,255,.05);">7060001012602</td>
+                    </tr>
+                    <tr>
+                      <th style="border-color: rgba(255,255,255,.05);">連絡先</th>
+                      <td style="border-color: rgba(255,255,255,.05);">
+                        電話：0287-39-7577<br>
+                        Mail：adtown@able.ocn.ne.jp
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div>
+                <h3 style="border-left: 4px solid var(--cyan); padding-left: 12px; margin-bottom: 20px;">事業実績</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 12px;">
+                  <li style="padding: 14px 18px; background: rgba(255,255,255,.04); border-radius: 14px; border: 1px solid rgba(255,255,255,.08); font-size: 14px;">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">創業2006年</strong>
+                    本年で20周年を迎える広告代理店
+                  </li>
+                  <li style="padding: 14px 18px; background: rgba(255,255,255,.04); border-radius: 14px; border: 1px solid rgba(255,255,255,.08); font-size: 14px;">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">多角的な支援</strong>
+                    情報誌発行、Web制作、YouTube運営、AI集客支援サービス事業
+                  </li>
+                  <li style="padding: 14px 18px; background: rgba(255,255,255,.04); border-radius: 14px; border: 1px solid rgba(255,255,255,.08); font-size: 14px;">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">1,000社以上の支援実績</strong>
+                    20年間の信頼と実績
+                  </li>
+                  <li style="padding: 14px 18px; background: rgba(255,255,255,.04); border-radius: 14px; border: 1px solid rgba(255,255,255,.08); font-size: 14px;">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">延べ1億冊</strong>
+                    圧倒的な情報発信・媒体力
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="mobile-cta">
+    <a href="https://adtown9800.netlify.app/" class="btn btn-primary btn-block">今すぐ登録する</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container center">
+      <div style="margin-bottom: 24px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <a href="privacy.html#privacy" style="color: var(--sub); font-size: 13px;">プライバシーポリシー</a>
+        <a href="privacy.html#disclaimer" style="color: var(--sub); font-size: 13px;">免責事項</a>
+        <a href="privacy.html#cookie" style="color: var(--sub); font-size: 13px;">クッキーポリシー</a>
+        <a href="tokushoho.html" style="color: var(--sub); font-size: 13px;">特定商取引法に基づく表記</a>
+      </div>
+      <p>&copy; 株式会社adtown All Rights Reserved.</p>
+      <p style="margin-top: 8px; opacity: 0.7;">※ページ内の外部引用・要旨は、各社の公式発信をもとにしています。</p>
+    </div>
+  </footer>
+
+  <script>
+    function setupValidation(formId, messageId) {
+      const form = document.getElementById(formId);
+      const message = document.getElementById(messageId);
+      if (!form || !message) return;
+
+      form.addEventListener('submit', function(e){
+        const requiredFields = form.querySelectorAll('[required]');
+        let valid = true;
+
+        requiredFields.forEach(field => {
+          if ((field.type === 'checkbox' && !field.checked) || (field.type !== 'checkbox' && !field.value.trim())) {
+            valid = false;
+            field.style.borderColor = '#ff7b7b';
+          } else {
+            field.style.borderColor = 'rgba(255,255,255,.12)';
+          }
+        });
+
+        if (!valid) {
+          e.preventDefault();
+          message.textContent = '必須項目をご確認ください。';
+          message.style.color = '#ffb4b4';
+          return;
+        }
+
+        if (form.getAttribute("action") !== "payment.html") {
+            message.textContent = '送信中です...';
+            message.style.color = '#9ff3cc';
+        }
+      });
+    }
+
+    setupValidation('diagnosis-form', 'formMessage');
+  </script>
+</body>
+</html>
+
+
