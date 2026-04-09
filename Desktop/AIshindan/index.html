@@ -35,7 +35,7 @@
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth; overflow-x: hidden;}
     body{
       margin:0;
       font-family:"Inter","Noto Sans JP",system-ui,-apple-system,sans-serif;
@@ -46,6 +46,8 @@
         radial-gradient(circle at 50% 100%, rgba(255,93,93,.09), transparent 22%),
         linear-gradient(180deg,#08101f 0%, #0a1223 42%, #0b1428 100%);
       line-height:1.75;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     a{color:inherit;text-decoration:none}
@@ -690,14 +692,30 @@
       .shift-grid,
       .crisis-grid,
       .hero-points,
-      .form-grid{
+      .form-grid,
+      .company-grid{
         grid-template-columns:1fr;
+        gap: 20px;
       }
       .authority-wrap,
       .hero-panel,
       .entry-wrap,
-      .diagnosis{
-        padding:22px;
+      .diagnosis,
+      .company-inner{
+        padding:22px !important;
+      }
+      .company-statement{
+        margin-bottom: 24px !important;
+        font-size: 0.95rem !important;
+      }
+      .metric-table th{
+        width: 100px !important;
+        font-size: 13px;
+        padding: 12px 8px !important;
+      }
+      .metric-table td{
+        font-size: 13px;
+        padding: 12px 8px !important;
       }
       .mobile-cta{display:block}
     }
@@ -1387,28 +1405,28 @@
 
     <div class="container center" style="padding: 40px 0 20px;">
       <p style="font-size: 16px; font-weight: bold;">
-        <a href="https://adtown9800shindan.netlify.app/" style="color: #93e2ff; text-decoration: underline; text-underline-offset: 4px;">無料診断は受けずに、すぐ申し込む方は、こちらから</a>
+        <a href="https://adtown9800.netlify.app/" style="color: #93e2ff; text-decoration: underline; text-underline-offset: 4px;">無料診断は受けずに、すぐ申し込む方は、こちらから</a>
       </p>
     </div>
 
 
     <section id="company" class="section">
       <div class="container">
-        <div class="glass" style="padding: 40px;">
+        <div class="glass company-inner" style="padding: 40px;">
           <div class="center" style="margin-bottom: 32px;">
             <span class="kicker">COMPANY</span>
             <h2>運営会社</h2>
           </div>
           
           <div style="max-width: 900px; margin: 0 auto;">
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-bottom: 48px; text-align: center; font-weight: 500;">
+            <p class="company-statement" style="font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-bottom: 48px; text-align: center; font-weight: 500;">
               創業から20年、地域の集客を支え続けてきた広告代理店としての知見を、AI検索時代の新たな基準で提供。AIと人、その両方に選ばれる店舗運営を徹底サポートいたします。
             </p>
 
             <div class="company-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px;">
               <div>
                 <h3 style="border-left: 4px solid var(--cyan); padding-left: 12px; margin-bottom: 20px;">会社概要</h3>
-                <table class="metric-table" style="background: none; border: none;">
+                <table class="metric-table" style="background: none; border: none; width: 100%;">
                   <tbody>
                     <tr>
                       <th style="width: 120px; white-space: nowrap; border-color: rgba(255,255,255,.05);">会社名</th>
@@ -1467,7 +1485,7 @@
   </main>
 
   <div class="mobile-cta">
-    <a href="https://adtown9800shindan.netlify.app/" class="btn btn-primary btn-block">今すぐ登録する</a>
+    <a href="https://adtown9800.netlify.app/" class="btn btn-primary btn-block">今すぐ登録する</a>
   </div>
 
   <footer class="footer">
