@@ -638,6 +638,25 @@
       margin-top:12px;
     }
 
+    .company-inner{ padding: 40px; }
+    .company-statement{
+      font-size: 1.1rem; line-height: 1.8; color: var(--text);
+      margin-bottom: 48px; text-align: center; font-weight: 500;
+      max-width: 800px; margin-inline: auto;
+    }
+    .company-grid{
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px;
+    }
+    .company-table{
+      background: none !important; border: none !important; width: 100%;
+    }
+    .company-table th{
+      width: 120px; border-color: rgba(255,255,255,.05) !important;
+    }
+    .company-table td{
+      border-color: rgba(255,255,255,.05) !important;
+    }
+
     .sources{
       margin-top:24px;
       display:grid;
@@ -708,14 +727,19 @@
         margin-bottom: 24px !important;
         font-size: 0.95rem !important;
       }
-      .metric-table th{
+      .metric-table th,
+      .company-table th{
         width: 100px !important;
         font-size: 13px;
         padding: 12px 8px !important;
+        white-space: normal !important;
+        word-break: keep-all;
       }
-      .metric-table td{
+      .metric-table td,
+      .company-table td{
         font-size: 13px;
         padding: 12px 8px !important;
+        word-break: break-all;
       }
       .mobile-cta{display:block}
     }
@@ -1412,41 +1436,41 @@
 
     <section id="company" class="section">
       <div class="container">
-        <div class="glass company-inner" style="padding: 40px;">
+        <div class="glass company-inner">
           <div class="center" style="margin-bottom: 32px;">
             <span class="kicker">COMPANY</span>
             <h2>運営会社</h2>
           </div>
           
-          <div style="max-width: 900px; margin: 0 auto;">
-            <p class="company-statement" style="font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-bottom: 48px; text-align: center; font-weight: 500;">
+          <div class="company-statement-wrap">
+            <p class="company-statement">
               創業から20年、地域の集客を支え続けてきた広告代理店としての知見を、AI検索時代の新たな基準で提供。AIと人、その両方に選ばれる店舗運営を徹底サポートいたします。
             </p>
 
-            <div class="company-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px;">
+            <div class="company-grid">
               <div>
                 <h3 style="border-left: 4px solid var(--cyan); padding-left: 12px; margin-bottom: 20px;">会社概要</h3>
-                <table class="metric-table" style="background: none; border: none; width: 100%;">
+                <table class="metric-table company-table">
                   <tbody>
                     <tr>
-                      <th style="width: 120px; white-space: nowrap; border-color: rgba(255,255,255,.05);">会社名</th>
-                      <td style="border-color: rgba(255,255,255,.05);">株式会社adtown</td>
+                      <th>会社名</th>
+                      <td>株式会社adtown</td>
                     </tr>
                     <tr>
-                      <th style="border-color: rgba(255,255,255,.05);">代表取締役</th>
-                      <td style="border-color: rgba(255,255,255,.05);">石下 かをり</td>
+                      <th>代表取締役</th>
+                      <td>石下 かをり</td>
                     </tr>
                     <tr>
-                      <th style="border-color: rgba(255,255,255,.05);">所在地</th>
-                      <td style="border-color: rgba(255,255,255,.05);">〒329-2711 栃木県那須塩原市石林698-35</td>
+                      <th>所在地</th>
+                      <td>〒329-2711 栃木県那須塩原市石林698-35</td>
                     </tr>
                     <tr>
-                      <th style="border-color: rgba(255,255,255,.05);">法人番号</th>
-                      <td style="border-color: rgba(255,255,255,.05);">7060001012602</td>
+                      <th>法人番号</th>
+                      <td>7060001012602</td>
                     </tr>
                     <tr>
-                      <th style="border-color: rgba(255,255,255,.05);">連絡先</th>
-                      <td style="border-color: rgba(255,255,255,.05);">
+                      <th>連絡先</th>
+                      <td>
                         電話：0287-39-7577<br>
                         Mail：adtown@able.ocn.ne.jp
                       </td>
