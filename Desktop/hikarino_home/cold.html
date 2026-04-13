@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZYNWC35C8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZZYNWC35C8');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="栃木県那須塩原市をはじめ、大田原市・那須町からも多数来院！女性専門整体｜冷え性・むくみ改善に特化。たった8回で足首-3cm、冷え知らずの体へ。完全個室・土日祝営業。初回1,980円">
+    <title>女性専門｜冷え性・むくみ改善整体 - たった8回で下半身スッキリ！｜Hikarino休日</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --main-pink: #FF758C;
+            --soft-pink: #FFF0F0;
+            --accent-gold: #BFA87C;
+            --dark-gray: #4A4A4A;
+            --deep-pink: #E91E63;
+            --warm-white: #FFFBFA;
+            --line-green: #06C755;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.8;
+            background-color: var(--warm-white);
+        }
+
+        .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* ヘッダー固定 */
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-fixed .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--main-pink);
+            letter-spacing: 1px;
+        }
+
+        .header-fixed .phone {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--deep-pink);
+            text-decoration: none;
+            border: 2px solid var(--main-pink);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .back-button {
+            background: transparent;
+            border: 2px solid var(--main-pink);
+            color: var(--main-pink);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .back-button:hover {
+            background: var(--main-pink);
+            color: white;
+            transform: translateX(-3px);
+        }
+
+        /* ファーストビュー */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-pink) 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            background: #E8E8E8;
+            margin: 0 auto 30px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-catch {
+            font-size: 26px;
+            font-weight: 900;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-catch .highlight {
+            color: var(--main-pink);
+            font-size: 30px;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .offer-box {
+            background: white;
+            border: 3px solid var(--main-pink);
+            border-radius: 20px;
+            padding: 30px 20px;
+            margin: 30px auto;
+            max-width: 450px;
+            box-shadow: 0 10px 25px rgba(255, 117, 140, 0.2);
+        }
+
+        .offer-price {
+            font-size: 16px;
+            text-decoration: line-through;
+            color: #AAA;
+            margin-bottom: 10px;
+        }
+
+        .offer-special {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--deep-pink);
+            margin: 15px 0;
+        }
+
+        .offer-discount {
+            background: var(--main-pink);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .offer-limit {
+            font-size: 14px;
+            color: var(--deep-pink);
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        /* CTA ボタン */
+        .cta-container {
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 30px;
+            margin: 15px auto;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-line {
+            background: var(--line-green);
+            color: white;
+            border-bottom: 5px solid #05a346;
+        }
+
+        .btn-line::before {
+            content: '●';
+            margin-right: 12px;
+            font-size: 24px;
+        }
+
+        .btn-phone {
+            background: linear-gradient(135deg, var(--main-pink) 0%, var(--deep-pink) 100%);
+            color: white;
+            border-bottom: 5px solid #C2185B;
+        }
+
+        .cta-subtext {
+            font-size: 15px;
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .cta-subtext.small {
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            color: #666;
+            text-align: left;
+            display: inline-block;
+            max-width: 450px;
+        }
+
+        .cta-group {
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        @media (min-width: 768px) {
+            .cta-container {
+                display: flex;
+                gap: 30px;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .cta-group {
+                flex: 1;
+                min-width: 300px;
+            }
+        }
+
+        .final-cta .cta-subtext {
+            color: white;
+        }
+
+        .final-cta .cta-subtext.small {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* セクション共通 */
+        .section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--main-pink), var(--accent-gold));
+            margin: 15px auto 0;
+            border-radius: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* 動画セクション */
+        .video-container {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #E8E8E8;
+        }
+
+        .video-wrapper iframe,
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* 共感セクション */
+        .problem-section {
+            background: var(--soft-pink);
+        }
+
+        .checklist {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .checklist-item::before {
+            content: '☐';
+            font-size: 24px;
+            color: var(--main-pink);
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .problem-message {
+            background: var(--main-pink);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .problem-explanation {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid var(--main-pink);
+        }
+
+        .problem-explanation p {
+            margin: 20px 0;
+            line-height: 2;
+        }
+
+        .closing-message {
+            background: var(--accent-gold);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        /* 比較表 */
+        .comparison-table {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 18px 15px;
+            text-align: center;
+            border-bottom: 1px solid #E8E8E8;
+        }
+
+        th {
+            background: var(--main-pink);
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:first-child {
+            background: var(--soft-pink);
+            font-weight: 700;
+            text-align: left;
+        }
+
+        /* 選ばれる理由 */
+        .reason-cards {
+            display: grid;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .reason-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--main-pink);
+        }
+
+        .reason-number {
+            display: inline-block;
+            background: var(--main-pink);
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .reason-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .reason-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .reason-list li {
+            padding-left: 25px;
+            position: relative;
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+
+        .reason-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--main-pink);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* 施術法説明 */
+        .method-section {
+            background: var(--soft-pink);
+        }
+
+        .method-content {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .method-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--main-pink);
+        }
+
+        .cause-box {
+            background: var(--soft-pink);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .cause-item {
+            margin: 20px 0;
+        }
+
+        .cause-item strong {
+            color: var(--main-pink);
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .method-image {
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            background: #E8E8E8;
+            margin: 30px auto;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            overflow: hidden;
+        }
+
+        .method-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ビフォーアフター */
+        .results-section {
+            background: white;
+        }
+
+        .result-card {
+            background: var(--soft-pink);
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-header {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .result-before-after {
+            display: grid;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .result-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .result-box h4 {
+            color: var(--main-pink);
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .result-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-box li {
+            padding-left: 20px;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .result-box li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--main-pink);
+        }
+
+        .ba-image {
+            width: 100%;
+            height: 250px;
+            background: #E8E8E8;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            overflow: hidden;
+        }
+
+        .ba-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 施術の流れ */
+        .flow-section {
+            background: var(--soft-pink);
+        }
+
+        .flow-steps {
+            margin: 40px 0;
+        }
+
+        .flow-step {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            padding-left: 90px;
+        }
+
+        .flow-step-number {
+            position: absolute;
+            left: 25px;
+            top: 30px;
+            background: var(--main-pink);
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .flow-step-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .flow-step-time {
+            display: inline-block;
+            background: var(--soft-pink);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--main-pink);
+            margin-bottom: 15px;
+        }
+
+        .flow-step ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .flow-step li {
+            padding-left: 20px;
+            position: relative;
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .flow-step li::before {
+            content: '・';
+            position: absolute;
+            left: 0;
+            color: var(--main-pink);
+            font-weight: 700;
+        }
+
+        .flow-total {
+            background: var(--main-pink);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+
+        /* 料金セクション */
+        .price-section {
+            background: white;
+        }
+
+        .price-cards {
+            display: grid;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .price-card {
+            background: var(--soft-pink);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .price-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .price-amount {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--main-pink);
+            margin: 15px 0;
+        }
+
+        .price-note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .reason-box {
+            background: var(--accent-gold);
+            color: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .reason-box h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .reason-box[style*="background: #FFF0F5"],
+        .reason-box[style*="FFF0F5"] {
+            color: black;
+        }
+
+        .reason-box[style*="background: #FFF0F5"] h3,
+        .reason-box[style*="FFF0F5"] h3 {
+            color: #E91E63;
+        }
+
+        .special-offer {
+            background: linear-gradient(135deg, var(--main-pink) 0%, var(--deep-pink) 100%);
+            color: white;
+            padding: 40px 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .special-offer .old-price {
+            font-size: 20px;
+            text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .special-offer .new-price {
+            font-size: 48px;
+            font-weight: 900;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .special-offer .discount-badge {
+            display: inline-block;
+            background: white;
+            color: var(--main-pink);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: 900;
+            margin: 15px 0;
+        }
+
+        .special-offer .limit {
+            font-size: 16px;
+            margin-top: 20px;
+            font-weight: 700;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: var(--soft-pink);
+        }
+
+        .faq-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            position: absolute;
+            left: 0;
+            color: white;
+            background: var(--main-pink);
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .faq-answer {
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        .faq-answer::before {
+            content: 'A';
+            position: absolute;
+            left: 0;
+            color: white;
+            background: var(--accent-gold);
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        /* 院長メッセージ */
+        .director-section {
+            background: white;
+        }
+
+        .director-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .director-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #E8E8E8;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .director-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .director-info {
+            text-align: center;
+        }
+
+        .director-name {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .director-title {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .director-message {
+            background: var(--soft-pink);
+            padding: 35px 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            line-height: 2;
+        }
+
+        .director-message h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: 30px 0 20px;
+        }
+
+        .credentials {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid var(--main-pink);
+        }
+
+        .credentials h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .credentials ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credentials li {
+            padding-left: 20px;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .credentials li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--main-pink);
+        }
+
+        /* アクセス */
+        .access-section {
+            background: var(--soft-pink);
+        }
+
+        .access-info {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .access-item {
+            margin: 25px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .access-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .access-content h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+        }
+
+        .access-content p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background: #E8E8E8;
+            border-radius: 15px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 最終CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #1F4436 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .final-cta p {
+            font-size: 16px;
+            line-height: 2;
+            margin: 20px auto;
+            max-width: 700px;
+        }
+
+        .final-cta .cta-container {
+            margin-top: 40px;
+        }
+
+        /* フッター */
+        .footer {
+            background: var(--dark-gray);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* レスポンシブ */
+        @media (min-width: 768px) {
+            .hero-catch {
+                font-size: 32px;
+            }
+
+            .hero-catch .highlight {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .result-before-after {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .price-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .director-profile {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .director-image {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+
+            .director-info {
+                text-align: left;
+            }
+        }
+
+        /* スムーススクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* アニメーション */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 固定ヘッダー -->
+    <header class="header-fixed">
+        <button class="back-button" onclick="history.back()" title="戻る">← 戻る</button>
+        <div class="logo">Hikarino休日</div>
+        <a href="tel:08064421591" class="phone"><span>📞</span> 080-6442-1591</a>
+    </header>
+
+    <!-- ファーストビュー -->
+    <section class="hero">
+        <h2 class="section-title" style="margin-bottom: 30px; font-size: 24px;">冷え・むくみを今すぐ改善したいあなたへ</h2>
+
+        <!-- 院長挨拶動画 -->
+        <section class="section video-container" style="padding: 40px 10px; text-align: center;">
+            <h2 class="section-title" style="margin-bottom: 20px;">院長からのメッセージ</h2>
+            <div class="video-wrapper"
+                style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 800px; margin: 0 auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+
+                <iframe src="https://www.youtube.com/embed/lCcBT5z5cBI"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <!-- 女性専門セクション -->
+    <section class="hero"
+        style="background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-pink) 100%); padding: 60px 20px; text-align: center;">
+        <h1 class="hero-catch serif">
+            女性専門｜完全個室で安心<br>
+            <span class="highlight">たった8回で足首-3cm</span><br>
+            冷え知らずの体へ！<br>
+            <span
+                style="font-size: 20px; color: var(--accent-gold); display: block; margin-top: 10px;">那須塩原市・大田原市・那須町で選ばれる冷え・むくみ改善整体</span>
+        </h1>
+    </section>
+
+    <!-- 料金案内セクション -->
+    <section class="section" style="background: var(--soft-pink); padding: 60px 20px;">
+        <h2 class="section-title" style="color: var(--main-pink); margin-bottom: 10px;">今すぐ改善したいあなたへ</h2>
+        <h3 class="section-title" style="font-size: 28px; color: var(--dark-gray); margin-bottom: 30px;">料金のご案内</h3>
+        <p class="section-subtitle"
+            style="color: var(--main-pink); font-weight: 700; font-size: 20px; margin-bottom: 40px;">今なら初回限定83%OFF</p>
+
+        <div class="special-offer"
+            style="background: white; border: 3px solid var(--main-pink); padding: 40px 30px; border-radius: 20px; margin: 30px auto 40px; max-width: 500px; text-align: center; box-shadow: 0 10px 25px rgba(255, 117, 140, 0.2);">
+            <p style="color: #AAA; text-decoration: line-through; font-size: 16px; margin-bottom: 10px;">通常初回施術費
+                12,000円のところ</p>
+            <p style="font-size: 36px; font-weight: 900; color: var(--deep-pink); margin: 15px 0;">初回限定価格 1,980円<span
+                    style="font-size: 24px;">（税込）</span></p>
+            <span
+                style="display: inline-block; background: var(--main-pink); color: white; padding: 10px 25px; border-radius: 30px; font-weight: 700; margin: 10px 0;">【83%OFF】</span>
+            <p style="font-size: 14px; color: var(--deep-pink); font-weight: 700; margin-top: 15px;">1日1名様限定
+                残り3名様<br>※先着順のため予約はお早めに</p>
+        </div>
+
+        <div class="reason-box"
+            style="background: white; padding: 30px 25px; border-radius: 15px; margin: 30px auto 40px; max-width: 600px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--accent-gold); margin-bottom: 15px;">なぜこの価格なのか？
+            </h3>
+            <p style="color: var(--dark-gray); line-height: 1.8; margin-bottom: 15px;">
+                本気で改善したい方に、まず当院の施術を体験していただきたいという想いから、初回限定でこの価格を実現しました。</p>
+            <p style="color: var(--dark-gray); line-height: 1.8; margin: 0;">当院の施術が、あなたに合うかどうかじっくり判断していただけます。</p>
+        </div>
+
+        <div class="cta-container"
+            style="display: flex; flex-direction: column; gap: 30px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 40px;">
+            <div class="cta-group" style="width: 100%; max-width: 450px;">
+                <p class="cta-subtext">LINEで簡単に当院の施術予約が可能です。<br>ご質問や体のお悩み相談もお気軽にご連絡ください。</p>
+                <a href="https://lin.ee/43SUnkF" class="btn btn-line" style="padding: 10px 30px;"><img
+                        src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="60"
+                        border="0"></a>
+            </div>
+            <div class="cta-group" style="width: 100%; max-width: 450px;">
+                <p class="cta-subtext">【完全予約制】施術のご予約は今すぐお電話</p>
+                <a href="tel:08064421591" class="btn btn-phone">080-6442-1591</a>
+                <p class="cta-subtext small">【受付時間】9時〜21時　 【定休日】不定休<br>※施術中は電話に出られませんので留守番電話にお名前と電話番号を伝言下さい。すぐに折り返し致します。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 共感セクション -->
+    <section class="section problem-section">
+        <h2 class="section-title serif">こんなお悩みありませんか？</h2>
+        <p class="section-subtitle">冷え性・むくみでお悩みの女性へ</p>
+
+        <div class="checklist">
+            <div class="checklist-item">年中手足が冷たい、夏でも靴下が手放せない</div>
+            <div class="checklist-item">夕方になると足がパンパンにむくんで靴がきつい</div>
+            <div class="checklist-item">下半身だけ太い、ダイエットしても下半身が痩せない</div>
+            <div class="checklist-item">足先が冷たくて夜眠れない、布団に入っても温まらない</div>
+            <div class="checklist-item">朝起きると顔がむくんでいる、指輪が抜けない</div>
+            <div class="checklist-item">お腹や腰周りが冷えている、生理痛がひどい</div>
+            <div class="checklist-item">疲れやすい、体がだるい、代謝が悪い</div>
+            <div class="checklist-item">マッサージや温泉に行っても一時的にしか良くならない</div>
+            <div class="checklist-item">どこに行っても『体質だから仕方ない』と言われた</div>
+        </div>
+
+        <div class="problem-message">
+            それ、骨盤の歪みと筋膜の硬さが原因かもしれません。
+        </div>
+
+        <div class="problem-explanation">
+            <p><strong>冷え性・むくみは単なる体質ではありません。</strong></p>
+
+            <p>骨盤の歪みにより血流・リンパの流れが滞り、下半身に老廃物が溜まっている状態です。</p>
+
+            <p>当院のMS式筋膜整体法なら、骨盤を整え、筋膜をリリースすることで根本から血流を改善します。</p>
+        </div>
+
+        <div class="closing-message">
+            <p>もし、あなたがその悩みを本気で改善したいとお考えでしたら、当院があなたのお力になれます。</p>
+
+            <p>しかし、『どこに行っても一緒でしょ』と思われるのでしたら、今すぐこのページを閉じて頂いて結構です。</p>
+
+            <p>でも『話を聞くだけでも』と思われましたら、ゆっくりとページを読み進めてください。</p>
+        </div>
+    </section>
+
+    <!-- 差別化セクション -->
+    <section class="section">
+        <h2 class="section-title">病院や他の整骨院と何が違うのか？</h2>
+
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>当院</th>
+                        <th>病院</th>
+                        <th>一般的な整骨院</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>改善方針</td>
+                        <td>根本改善：骨盤・筋膜から血流改善</td>
+                        <td>対症療法：薬や電気療法</td>
+                        <td>対症療法：マッサージのみ</td>
+                    </tr>
+                    <tr>
+                        <td>カウンセリング</td>
+                        <td>初回2時間：生活習慣まで徹底分析</td>
+                        <td>簡素な検査のみ</td>
+                        <td>マニュアル通り</td>
+                    </tr>
+                    <tr>
+                        <td>施術方法</td>
+                        <td>女性の冷え・むくみ専門オーダーメイド</td>
+                        <td>温熱療法・投薬のみ</td>
+                        <td>痛い所だけの施術</td>
+                    </tr>
+                    <tr>
+                        <td>プライバシー</td>
+                        <td>完全個室でリラックス</td>
+                        <td>大部屋で落ち着かない</td>
+                        <td>カーテン仕切りのみ</td>
+                    </tr>
+                    <tr>
+                        <td>アフターフォロー</td>
+                        <td>徹底フォロー＋LINE相談OK</td>
+                        <td>なし</td>
+                        <td>一部対応</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 5つの選ばれる理由 -->
+    <section class="section" style="background: var(--soft-pink);">
+        <h2 class="section-title serif">当院が選ばれる5つの理由</h2>
+
+        <div class="reason-cards">
+            <div class="reason-card fade-in">
+                <span class="reason-number">1</span>
+                <h3 class="reason-title">女性の冷え・むくみ専門「MS式筋膜整体法」</h3>
+                <ul class="reason-list">
+                    <li>NHK「ためしてガッテン」、TBS「金スマ」で紹介された筋膜リリース</li>
+                    <li>冷え・むくみに特化した独自メソッド</li>
+                    <li>累計施術20,000件以上の実績</li>
+                    <li>骨盤矯正×筋膜リリース×リンパ流しのトリプルアプローチ</li>
+                    <li>バキバキ・ボキボキしない痛くないソフトな施術</li>
+                    <li>施術中に体がポカポカ温まる心地よさ</li>
+                </ul>
+            </div>
+
+            <div class="reason-card fade-in">
+                <span class="reason-number">2</span>
+                <h3 class="reason-title">完全個室でプライバシー配慮</h3>
+                <ul class="reason-list">
+                    <li>女性専用の落ち着いた空間</li>
+                    <li>他の患者様と顔を合わせることなく施術</li>
+                    <li>リラックスして悩みを相談できる環境</li>
+                </ul>
+            </div>
+
+            <div class="reason-card fade-in">
+                <span class="reason-number">3</span>
+                <h3 class="reason-title">通いやすさNo.1</h3>
+                <ul class="reason-list">
+                    <li>土日祝も営業（休まず営業）</li>
+                    <li>21時まで受付（仕事帰りもOK）</li>
+                    <li>完全予約制で待ち時間なし</li>
+                    <li>駐車場3台完備</li>
+                    <li>定休日なし（不定休）</li>
+                </ul>
+            </div>
+
+            <div class="reason-card fade-in">
+                <span class="reason-number">4</span>
+                <h3 class="reason-title">初回2時間の徹底カウンセリング</h3>
+                <ul class="reason-list">
+                    <li>「なぜ冷えやむくみが出ているのか」を明確化</li>
+                    <li>「なぜ今まで改善しなかったのか」を解明</li>
+                    <li>「どうすれば改善するか」をわかりやすく説明</li>
+                    <li>食事・栄養・生活習慣まで総合的にアドバイス</li>
+                    <li>改善できない場合は正直にお伝えします</li>
+                </ul>
+            </div>
+
+            <div class="reason-card fade-in">
+                <span class="reason-number">5</span>
+                <h3 class="reason-title">結果にコミット</h3>
+                <ul class="reason-list">
+                    <li>平均8〜16回（約3ヶ月）で効果実感</li>
+                    <li>満足度97%（患者様アンケート結果）</li>
+                    <li>改善実績20,000件以上</li>
+                    <li>電話・LINEでアフター相談無料</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 施術法の説明 -->
+    <section class="section method-section">
+        <h2 class="section-title">冷え性・むくみに圧倒的な改善率を誇る<br>「MS式筋膜整体法」とは？</h2>
+        <p class="section-subtitle">NHK「ためしてガッテン」やTBS「金スマ」で取り上げられた筋膜リリースを中心に、<br>冷え・むくみ改善に特化した高い改善率を誇る独自の整体法です。</p>
+
+        <div class="method-content">
+            <h3 class="method-title">なぜ冷え・むくみが起こるのか?</h3>
+
+            <p>冷え・むくみの原因は主に3つあります：</p>
+
+            <div class="cause-box">
+                <div class="cause-item">
+                    <strong>1. 骨盤の歪み</strong>
+                    <p>→ 骨盤が歪むと血管やリンパ管が圧迫され、下半身への血流が悪化</p>
+                </div>
+
+                <div class="cause-item">
+                    <strong>2. 筋膜の硬さ</strong>
+                    <p>→ 筋膜が硬くなると筋肉が動きにくくなり、ポンプ機能が低下</p>
+                </div>
+
+                <div class="cause-item">
+                    <strong>3. 自律神経の乱れ</strong>
+                    <p>→ ストレスや姿勢の悪さで自律神経が乱れ、血管が収縮</p>
+                </div>
+            </div>
+
+            <p
+                style="font-weight: 700; color: var(--main-pink); font-size: 18px; text-align: center; margin-top: 20px;">
+                当院の施術は、この3つを同時に改善します。</p>
+
+            <h3 class="method-title">施術の特徴</h3>
+
+            <ul class="reason-list">
+                <li>骨盤矯正で血流の通り道を確保</li>
+                <li>筋膜リリースで筋肉のポンプ機能を回復</li>
+                <li>自律神経調整で血管の収縮を改善</li>
+                <li>リンパドレナージュで老廃物を排出</li>
+                <li>女性のデリケートな体に配慮したソフトタッチ</li>
+                <li>痛みゼロ・バキバキしない安心施術</li>
+                <li>施術中に体が温まる心地よさ</li>
+                <li>施術後すぐに足の軽さを実感</li>
+            </ul>
+        </div>
+
+        <div class="method-image" style="text-align: center; margin: 30px auto; max-width: 800px; padding: 0 10px;">
+            <img src="221108_Hikarino7.JPG" alt="施術の様子"
+                style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
+    </section>
+
+    <!-- 実績・ビフォーアフター -->
+    <section class="section results-section">
+            <h2 class="section-title">実際の変化をご覧ください</h2>
+            <p class="section-subtitle">お客様の声と実際の改善例</p>
+
+            <div class="result-card">
+                <div class="result-header">Aさん（38歳・那須塩原市・デスクワーク）</div>
+                <div class="result-before-after">
+                    <div class="result-box">
+                        <h4>来院前</h4>
+                        <ul>
+                            <li>足首周り22cm、ふくらはぎ38cm</li>
+                            <li>年中足先が冷たい、夜眠れない</li>
+                            <li>夕方の足のむくみがひどい</li>
+                        </ul>
+                    </div>
+                    <div class="result-box">
+                        <h4>施術12回後</h4>
+                        <ul>
+                            <li>足首周り19cm（-3cm）</li>
+                            <li>ふくらはぎ34cm（-4cm）</li>
+                            <li>足先がポカポカ、靴下なしで眠れる</li>
+                            <li>夕方のむくみが気にならない</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ba-image">
+                    <img src="ashi1.jpg" alt="Aさんのビフォーアフター">
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-header">Bさん（42歳・大田原市・主婦）</div>
+                <div class="result-before-after">
+                    <div class="result-box">
+                        <h4>来院前</h4>
+                        <ul>
+                            <li>ふくらはぎ40cm、太もも58cm</li>
+                            <li>下半身だけ太い、冷えでお腹が痛い</li>
+                            <li>マッサージしても翌日には戻る</li>
+                        </ul>
+                    </div>
+                    <div class="result-box">
+                        <h4>施術10回後</h4>
+                        <ul>
+                            <li>ふくらはぎ36cm（-4cm）</li>
+                            <li>太もも54cm（-4cm）</li>
+                            <li>体が温まりやすくなった</li>
+                            <li>下半身がスッキリ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ba-image">
+                    <img src="ashi2.jpg" alt="Bさんのビフォーアフター">
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-header">Cさん（29歳・那須町・販売職）</div>
+                <div class="result-before-after">
+                    <div class="result-box">
+                        <h4>来院前</h4>
+                        <ul>
+                            <li>足首周り23cm、立ち仕事で足がパンパン</li>
+                            <li>冷え性で生理痛がひどい</li>
+                            <li>疲れやすく体がだるい</li>
+                        </ul>
+                    </div>
+                    <div class="result-box">
+                        <h4>施術8回後</h4>
+                        <ul>
+                            <li>足首周り20cm（-3cm）</li>
+                            <li>足の疲れが軽減、仕事が楽に</li>
+                            <li>冷え性と生理痛が改善</li>
+                            <li>体が軽くなり疲れにくい</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ba-image">
+                    <img src="ashi3.jpg" alt="Cさんのビフォーアフター">
+                </div>
+            </div>
+        </section>
+
+    <!-- お客様からの喜びの声 -->
+   <section class="section" style="background: white; padding: 40px 0;">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">冷え・むくみ解消の喜びの声</h2>
+    
+    <div class="voice-container" style="max-width: 850px; margin: 0 auto; padding: 0 20px;">
+
+        <div class="result-card" style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 30px; background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="flex-shrink: 0; width: 80px; height: 80px; background: #fff0f3; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#e91e63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <div style="flex: 1;">
+                <h3 style="font-size: 18px; color: #d81b60; margin: 0 0 10px 0;">SAIさん（女性/40代/会社員）</h3>
+                <p style="font-size: 14px; line-height: 1.8; color: #333; margin: 0;">
+                    長年、酷い冷え性に悩まされてきました。特に下半身が氷のように冷たく、冬場は寝付けないほどでしたが、こちらに通い始めてから体温が上がったのを実感しています。今ではあんなに辛かった足元の冷えがなくなり、びっくりしています。血流が良くなったおかげか、肌のキメも細かくなり、体全体がポカポカして毎日がとても楽になりました。
+                </p>
+            </div>
+        </div>
+
+        <div class="result-card" style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 30px; background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="flex-shrink: 0; width: 80px; height: 80px; background: #e3f2fd; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#03a9f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.8 4-4 0-3.3-4-6.3-4-6.3S3 9 3 12.3c0 2.2 1.8 4 4 4zM17.5 22c3.3 0 6-2.7 6-6 0-5-6-9.5-6-9.5S11.5 11 11.5 16c0 3.3 2.7 6 6 6z"/></svg>
+            </div>
+            <div style="flex: 1;">
+                <h3 style="font-size: 18px; color: #d81b60; margin: 0 0 10px 0;">Rnさん（女性/50代/会社員）</h3>
+                <p style="font-size: 14px; line-height: 1.8; color: #333; margin: 0;">
+                    夕方になると靴がきつくなるほどの足のむくみに諦めかけていました。ヒカリノキュウジツさんの整体を受け始めて3ヶ月、お腹から下が驚くほどスッキリ！パンパンだったふくらはぎが柔らかくなり、以前履けなかったズボンがスッと入るようになりました。代謝が上がったおかげか、立ち仕事の後の疲れ方も以前とは全く違います。
+                </p>
+            </div>
+        </div>
+
+        <div class="result-card" style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 30px; background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="flex-shrink: 0; width: 80px; height: 80px; background: #f1f8e9; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#8bc34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.76z"/></svg>
+            </div>
+            <div style="flex: 1;">
+                <h3 style="font-size: 18px; color: #d81b60; margin: 0 0 10px 0;">ななさん（女性/30代後半/会社員）</h3>
+                <p style="font-size: 14px; line-height: 1.8; color: #333; margin: 0;">
+                    最初は腰痛がきっかけでしたが、美容整体を受けて驚きました。万年の悩みだった足先の冷えと、朝起きた時の顔や足のむくみが劇的に改善されました。巡りが良くなったせいか、体重以上に見た目が細くなり、特にお腹周りから下半身にかけてのラインが綺麗になったのが嬉しいです。日々のメンテナンスとして欠かせません！
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+        <img src="suiall_pc.webp" alt="実績画像" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+</section>
+
+    <!-- 施術の流れ -->
+    <section class="section flow-section">
+        <h2 class="section-title">初めての方も安心｜施術の流れ</h2>
+        <p class="section-subtitle">初回は2時間かけてじっくりとカウンセリング・施術を行います</p>
+
+        <style>
+            /* ステップ全体のデザイン調整 */
+            .flow-step {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                /* 左寄せ */
+                text-align: left;
+                padding: 40px 25px;
+                margin-bottom: 40px;
+                border: 1px solid #eee;
+                border-radius: 20px;
+                background: #fff;
+                position: relative;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            /* STEPラベル（ピンクの丸に黒文字） */
+            .flow-step-number {
+                background: #ff758c;
+                color: #333 !important;
+                /* 文字を濃くしてハッキリ見せる */
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 1.2;
+                margin-bottom: 15px;
+                /* タイトルの上に配置 */
+            }
+
+            .flow-step-title {
+                margin: 0 0 10px 0;
+                font-size: 24px;
+                color: #b38b4d;
+                /* アクセントのゴールド系 */
+                font-weight: bold;
+            }
+
+            .flow-step-time {
+                background: #fff0f5;
+                color: #e91e63;
+                padding: 3px 15px;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 15px;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+
+            .flow-step ul {
+                margin: 0 0 20px 0;
+                padding-left: 20px;
+            }
+
+            .flow-step ul li {
+                margin-bottom: 8px;
+                list-style-type: disc;
+            }
+
+            .flow-total {
+                text-align: center;
+                font-weight: bold;
+                font-size: 18px;
+                background: #fff0f5;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 20px;
+                color: #e91e63;
+            }
+        </style>
+
+        <style>
+            /* ステップ全体のデザイン調整 */
+            .flow-step {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 50px 25px 30px;
+                /* 上部に余白を作り、STEPがタイトルに被らないようにする */
+                margin-bottom: 50px;
+                border: 2px solid #fff0f5;
+                border-radius: 20px;
+                background: #fff;
+                position: relative;
+                /* STEPラベルの基準位置 */
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            /* STEPラベル：タイトルの上に絶対配置して被りを防止 */
+            .flow-step-number {
+                position: absolute;
+                top: -25px;
+                /* 枠線の上に少し飛び出す配置 */
+                left: 20px;
+                background: #ff758c;
+                color: #333 !important;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 1.2;
+                z-index: 10;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .flow-step-title {
+                margin: 10px 0 10px 0;
+                /* STEPラベルとの距離を確保 */
+                font-size: 24px;
+                color: #b38b4d;
+                font-weight: bold;
+                display: block;
+                width: 100%;
+            }
+
+            .flow-step-time {
+                background: #fff0f5;
+                color: #e91e63;
+                padding: 3px 15px;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 15px;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+
+            .flow-step ul {
+                margin: 0 0 20px 0;
+                padding-left: 20px;
+                width: 100%;
+            }
+
+            .flow-step ul li {
+                margin-bottom: 8px;
+                list-style-type: disc;
+                line-height: 1.6;
+            }
+
+            .flow-total {
+                text-align: center;
+                font-weight: bold;
+                font-size: 18px;
+                background: #fff0f5;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 30px 0;
+                color: #e91e63;
+            }
+
+            .flow-step img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+        </style>
+
+        <div class="flow-steps">
+            <div class="flow-step">
+                <div class="flow-step-number">STEP<br>1</div>
+                <h3 class="flow-step-title">徹底カウンセリング</h3>
+                <span class="flow-step-time">60分</span>
+                <ul>
+                    <li>現在の体の状態を詳しくヒアリング</li>
+                    <li>冷え・むくみの症状、いつから、どんな時に出るか</li>
+                    <li>過去の治療歴、改善しなかった理由を分析</li>
+                    <li>生活習慣、食事、水分摂取、運動習慣をチェック</li>
+                    <li>睡眠状況、ストレス状態を確認</li>
+                    <li>お悩みをじっくり傾聴（完全個室で安心）</li>
+                </ul>
+                <img src="20231028_Hikarino3.jpg" alt="徹底カウンセリング">
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-step-number">STEP<br>2</div>
+                <h3 class="flow-step-title">独自の検査・測定</h3>
+                <span class="flow-step-time">30分</span>
+                <ul>
+                    <li>骨盤の歪み・バランスを専門機器で測定</li>
+                    <li>筋膜の状態をチェック</li>
+                    <li>血流・リンパの流れを確認</li>
+                    <li>姿勢分析・身体バランス確認</li>
+                    <li>冷え・むくみの原因を徹底的に特定</li>
+                    <li>ビフォー写真・サイズ測定記録</li>
+                </ul>
+                <img src="221108_Hikarino8.JPG" alt="独自の検査・測定">
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-step-number">STEP<br>3</div>
+                <h3 class="flow-step-title">説明とご提案</h3>
+                <span class="flow-step-time">15分</span>
+                <ul>
+                    <li>「なぜ冷え・むくみが出ているのか」を明確に説明</li>
+                    <li>「なぜ今まで改善しなかったのか」を解明</li>
+                    <li>「どうすれば改善するか」をわかりやすく提示</li>
+                    <li>最適な施術プランをご提案</li>
+                    <li>改善の見込み・期間・回数を正直にお伝え</li>
+                    <li>※改善が難しい場合も正直にお伝えします</li>
+                </ul>
+                <img src="20231028Hikarino4.jpg" alt="説明とご提案">
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-step-number">STEP<br>4</div>
+                <h3 class="flow-step-title">施術</h3>
+                <span class="flow-step-time">30分</span>
+                <ul>
+                    <li>女性専門のMS式筋膜整体法</li>
+                    <li>痛くないソフトな骨盤矯正</li>
+                    <li>筋膜リリースで筋肉を緩める</li>
+                    <li>リンパドレナージュで老廃物排出</li>
+                    <li>自律神経調整で血管の収縮改善</li>
+                    <li>施術中に体がポカポカ温まります</li>
+                </ul>
+                <img src="221108_Hikarino7.JPG" alt="施術">
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-step-number">STEP<br>5</div>
+                <h3 class="flow-step-title">アフターケア指導</h3>
+                <span class="flow-step-time">15分</span>
+                <ul>
+                    <li>自宅でできる冷え・むくみ改善セルフケア</li>
+                    <li>正しい姿勢・身体の使い方レクチャー</li>
+                    <li>食事・栄養・水分摂取アドバイス</li>
+                    <li>入浴法・温活指導</li>
+                    <li>生活習慣改善アドバイス</li>
+                    <li>次回予約のご案内</li>
+                    <li>質問・相談タイム</li>
+                    <li>アフター写真・サイズ測定</li>
+                </ul>
+                <img src="20231028_Hikarino3.jpg" alt="アフターケア指導">
+            </div>
+        </div>
+
+        <div class="flow-total">
+            合計所要時間：初回約2時間（2回目以降60分）
+        </div>
+
+        <!-- 料金 -->
+        <section class="section price-section">
+            <h2 class="section-title">料金のご案内</h2>
+            <p class="section-subtitle">今なら初回限定83%OFF</p>
+
+            <div class="price-cards">
+                <div class="price-card">
+                    <h3>初回カウンセリング+検査+施術</h3>
+                    <p style="color: #666; font-size: 14px;">（2時間）</p>
+                    <div class="price-amount">通常 12,000円</div>
+                </div>
+
+                <div class="price-card">
+                    <h3>2回目以降</h3>
+                    <p style="color: #666; font-size: 14px;">（60分）</p>
+                    <div class="price-amount">通常 11,000円</div>
+                </div>
+        </section>
+
+        <div class="special-offer">
+            <p class="old-price">通常初回施術費 12,000円のところ</p>
+            <p class="new-price">初回限定価格 1,980円<span style="font-size: 24px;">（税込）</span></p>
+            <span class="discount-badge">【83%OFF】</span>
+            <p class="limit">1日1名様限定 残り3名様<br>※先着順のため予約はお早めに</p>
+        </div>
+    </section>
+
+    <div class="reason-box">
+        <h3>なぜこの価格なのか？</h3>
+        <p>本気で改善したい方に、まず当院の施術を体験していただきたいという想いから、初回限定でこの価格を実現しました。</p>
+        <p style="margin-top: 15px;">当院の施術が、あなたに合うかどうかじっくり判断していただけます。</p>
+    </div>
+
+    <div class="reason-box" style="background: #FFF0F5; border: 2px solid #FF758C; color: black;">
+        <h3 style="color: #E91E63; font-size: 20px;">初回施術費の全額返金保証付き<br><span
+                style="font-size: 14px; font-weight: normal; letter-spacing: 2px;">GUARANTEE</span></h3>
+        <p style="margin-bottom: 20px; line-height: 1.8; color: black;">
+            当院の施術で症状が改善されなかった方には<br>初回施術費を全額返金致します。<br>あなたにリスクはありません。</p>
+
+        <p style="margin-bottom: 15px; line-height: 1.8; font-size: 14px; color: black;">
+            ここまで聞いてまだ不安なあなたへ、<br>初回の施術で改善結果を実感できなければ施術費を全額返金します。<br>今、那須塩原市には多くの整体院や整骨院、マッサージ屋さんがあり自分はどこに行けば改善するのかわからない状態にあると思います。
+        </p>
+
+        <p style="margin-bottom: 15px; line-height: 1.8; font-size: 14px; color: black;">
+            とりあえず行ってみた結果、「ここは少し違ったな・・・」と思う方も少なくないと思います。</p>
+
+        <p style="margin-bottom: 15px; line-height: 1.8; font-size: 14px; color: black;">
+            そこで私の施術を受けて頂いて1mmでも変化がない、改善結果が感じられないと思った場合は初回施術終了後にお申し付け下さい。初回施術料を返金させていただきます。</p>
+
+        <p style="margin-bottom: 0; line-height: 1.8; font-size: 14px; color: black;">
+            私は、施術に改善結果を感じていただけなかった方からは施術費を頂きません。「ここでなら頭痛・肩こりが改善できる！」と思って頂けた時に料金をお支払いください。</p>
+    </div>
+
+    <div class="cta-container">
+        <div class="cta-group">
+            <p class="cta-subtext">LINEで簡単に当院の施術予約が可能です。<br>ご質問や体のお悩み相談もお気軽にご連絡ください。</p>
+            <a href="https://lin.ee/43SUnkF" class="btn btn-line" style="padding: 10px 30px;"><img
+                    src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="60"
+                    border="0"></a>
+        </div>
+        <div class="cta-group">
+            <p class="cta-subtext">【完全予約制】施術のご予約は今すぐお電話</p>
+            <a href="tel:08064421591" class="btn btn-phone">080-6442-1591</a>
+            <p class="cta-subtext small">【受付時間】9時〜21時　
+                【定休日】不定休<br>※施術中は電話に出られませんので留守番電話にお名前と電話番号を伝言下さい。すぐに折り返し致します。
+            </p>
+        </div>
+    </div>
+    </section>
+    <!-- 注意事項セクション -->
+    <section class="section notes-section"
+        style="background: var(--light-pink); border-radius: 20px; margin: 40px auto; padding: 40px 25px; border: 2px dashed var(--main-pink);">
+        <h3
+            style="color: var(--deep-rose); text-align: center; font-size: 22px; margin-bottom: 25px; font-weight: bold;">
+            【ご予約に関する注意事項】</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 15px; padding-left: 25px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--deep-rose);">◆</span>
+                <strong>キャンセル・時間変更について：</strong><br>
+                ご予約のキャンセルや変更は、前日の24時間前までにご連絡をお願いいたします。当日キャンセルの場合は、施術代の100%を頂戴する場合がございます。
+            </li>
+            <li style="margin-bottom: 15px; padding-left: 25px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--deep-rose);">◆</span>
+                <strong>ご来院時間について：</strong><br>
+                初回はカウンセリング票の記入がございますので、予約時間の5分前にお越しください。
+            </li>
+            <li style="margin-bottom: 15px; padding-left: 25px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--deep-rose);">◆</span>
+                <strong>服装について：</strong><br>
+                動きやすい服装（パンツスタイル）でお越しください。スカートや硬いデニム、厚手のセーターはお控えいただけますと幸いです。
+            </li>
+            <li style="margin-bottom: 15px; padding-left: 25px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--deep-rose);">◆</span>
+                <strong>施術の制限について：</strong><br>
+                妊娠中の方、または重度の疾患をお持ちの方は、事前にお医者様にご相談の上、ご予約ください。
+            </li>
+        </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <h2 class="section-title">よくあるご質問</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">何回くらい通えば効果が出ますか？</div>
+            <div class="faq-answer">個人差はありますが、平均8〜16回（約3ヶ月）で多くの方が効果を実感されています。初回の施術で8割の方が足の軽さや温かさを感じられています。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">痛くないですか？怖いです。</div>
+            <div class="faq-answer">
+                ソフトな施術ですので痛みはほとんどありません。バキバキ・ボキボキと骨を鳴らす施術は一切行いません。女性のデリケートな体に配慮した優しい施術です。施術中に眠ってしまう方も多数いらっしゃいます。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">どんな服装で行けばいいですか？</div>
+            <div class="faq-answer">動きやすい服装でお越しください。ジーンズやスカートは避けていただき、ジャージやスウェットなどがおすすめです。お着替えもご用意しております。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">冷え性は体質だから治らないと言われました。</div>
+            <div class="faq-answer">冷え性は体質ではなく、骨盤の歪みや筋膜の硬さによる血流不良が原因です。当院では根本から改善する施術を行っていますので、多くの方が改善されています。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">むくみはマッサージでも改善しないのですが…</div>
+            <div class="faq-answer">マッサージは一時的な改善にすぎません。当院では骨盤を整え、筋膜をリリースすることで、血流・リンパの流れを根本から改善します。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">生理中でも施術は受けられますか？</div>
+            <div class="faq-answer">はい、問題ありません。むしろ骨盤を整えることで生理痛の改善にもつながります。体調に合わせて施術を調整いたしますのでご安心ください。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">保険は使えますか？</div>
+            <div class="faq-answer">冷え・むくみ改善整体は自費診療となります。保険適用外ですが、初回1,980円の特別価格をご用意しております。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">駐車場はありますか？</div>
+            <div class="faq-answer">専用駐車場を3台完備しております。満車の場合はお電話いただければ誘導いたします。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">予約は必要ですか？</div>
+            <div class="faq-answer">完全予約制となっております。1日1名様限定のため、必ず事前にご予約をお願いいたします。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">土日でも通えますか？</div>
+            <div class="faq-answer">はい、土日祝も営業しており、21時まで受付しております。平日お仕事の方にも通いやすい環境です。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">他の整体や病院に通っていますが、併用できますか？</div>
+            <div class="faq-answer">まずは現在の治療状況を詳しくお聞かせください。場合によっては併用をお断りすることもございます。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">サプリや健康食品を売りつけられませんか？</div>
+            <div class="faq-answer">無理な販売は一切いたしません。必要な場合のみアドバイスさせていただきます。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">改善しなかった場合はどうなりますか？</div>
+            <div class="faq-answer">初回のカウンセリング時に、改善の見込みを正直にお伝えします。改善が難しいと判断した場合は、その旨をお伝えし、他の専門医療機関をご紹介いたします。</div>
+        </div>
+    </section>
+
+    <!-- 院長メッセージ -->
+    <section class="section director-section">
+        <h2 class="section-title">院長からのメッセージ</h2>
+
+        <div class="director-profile">
+            <div class="director-image">
+                <img src="incho.webp" alt="院長 佐藤光彦">
+            </div>
+            <div class="director-info">
+                <h3 class="director-name serif">院長 佐藤 光彦</h3>
+                <div class="director-title">
+                    整体歴16年<br>
+                    筋膜リリース施術者<br>
+                    MSMメソッド修了<br>
+                    リフレクソロジスト
+                </div>
+            </div>
+        </div>
+
+        <div class="director-message serif">
+            <h3>佐藤光彦があなたの冷え・むくみの悩みを解決します</h3>
+
+            <p>私は栃木県那須塩原市で生まれ、4歳から父の仕事の関係で東京都狛江市、アメリカやカリフォルニア州で小学6年生まで過ごしました。</p>
+
+            <p>地元でバスケットボールや趣味のゴルフで練習中に腰を痛めたことありました。その後導かれる様に、23歳の時にこの業界に入り、現場での5年間で店長を経験、その後現場が大好きながらもお客様を大切にしている人間を会社側から支えたいとエリアマネージャーとして人の教育や店舗運営で長く仕事をやっておりました。
+            </p>
+
+            <p>仕事自体、業績に任されており充実しておりましたが、もっと改善できるお客様を増やしたい！お客様を大切にする成長できる組織を作りたい！元々独立志向が強く社内独立も真剣に考えて悩んだ時期もありました。</p>
+
+            <p>苦渋の決断ですがより自分の理想の形を作りたいと会社を辞めて自分で開業することにしました。</p>
+
+            <p>元々整体の勉強が好きで学んでいましたが、もっと勉強に熱が入り、原因に対しての根本施術、そして原因を作らないための正しい感覚入力を順番に正しい方法で指導して、痛みの解消はもちろんより高いレベルの体の使い方を指導することで、痛みや不調がなくなったあとの本当のやりたいこと、諦めてしまっていたことが実現ができることをサポートできる価値を提供したい！その気持ちを胸に日々活動しております。
+            </p>
+
+            <hr style="margin: 30px 0; border: none; border-top: 2px solid var(--main-pink);">
+
+            <p>冷え性やむくみは、『体質だから仕方ない』と諦めている女性が多いですが、実は改善できる症状です。</p>
+
+            <p>『マッサージに行っても翌日には戻る』<br>
+                『温めても一時的にしか良くならない』<br>
+                『病院で検査しても異常なしと言われた』</p>
+
+            <p>そんな経験はありませんか？</p>
+
+            <p>それは、表面的な対処しかしていないからです。</p>
+
+            <p>当院では、骨盤の歪みを整え、筋膜をリリースすることで、血流・リンパの流れを根本から改善します。</p>
+
+            <p>初回は2時間かけて、じっくりとお話を伺い、<br>
+                『なぜ冷え・むくみが出ているのか』<br>
+                『なぜ今まで改善しなかったのか』<br>
+                『どうすれば改善するか』<br>
+                を、わかりやすく説明いたします。</p>
+
+            <p>もし改善が難しいと判断した場合は、正直にお伝えし、適切な医療機関をご紹介します。無理に施術を勧めることは一切ありません。</p>
+
+            <p>完全個室でプライバシーを守り、女性が安心して通える環境を整えています。</p>
+
+            <p>一緒に、冷え知らずの快適な体を手に入れましょう！</p>
+
+            <p style="font-weight: 700; color: var(--accent-gold); font-size: 18px; margin-top: 30px;">
+                あなたのご来院を、心よりお待ちしております。</p>
+        </div>
+
+        <div class="credentials">
+            <h4>経歴・資格</h4>
+            <ul>
+                <li>栃木県那須塩原市出身</li>
+                <li>整体業界歴16年</li>
+                <li>店長・エリアマネージャー経験</li>
+                <li>筋膜リリース施術者認定</li>
+                <li>MSMメソッド修了</li>
+                <li>リフレクソロジスト</li>
+                <li>累計施術実績20,000件以上</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Amazon本紹介 -->
+    <section class="section" style="background: white; text-align: center; padding: 60px 20px;">
+        <h2 class="section-title">院長 著書のご紹介</h2>
+        <p class="section-subtitle">「肩こり そのまま放置は危険」Amazonにて好評発売中！</p>
+
+        <div
+            style="max-width: 400px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 10px; overflow: hidden; background: #f9f9f9; padding: 20px;">
+            <a href="https://www.amazon.co.jp/%E8%82%A9%E3%81%93%E3%82%8A-%E3%81%9D%E3%81%AE%E3%81%BE%E3%81%BE%E6%94%BE%E7%BD%AE%E3%81%AF%E5%8D%B1%E9%99%BA-%E4%BD%90%E8%97%A4-%E5%85%89%E5%BD%A6-ebook/dp/B0DPSH485Y/ref=sr_1_1?crid=13SYJ05UF4LRQ&dib=eyJ2IjoiMSJ9.D4vTBWvm6pm5C1nlwrLT163vftfREz-ZzybsOH0YpqJoEZlEWuzsSxAvLAhW6vwA.xipEc-RHdG_kkbAf-aT0eqXC1iZGtKICW7NiKv8_9vw&dib_tag=se&keywords=%E4%BD%90%E8%97%A4%E5%85%89%E5%BD%A6&qid=1767775672&s=books&sprefix=%2Cstripbooks%2C229&sr=1-1"
+                target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                <img src="71xO0ZCz4pL._SL1500_.jpg" alt="著書：肩こり そのまま放置は危険"
+                    style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 20px;">
+                <p
+                    style="font-weight: 700; color: var(--accent-gold); font-size: 18px; line-height: 1.4; margin-bottom: 15px;">
+                    肩こり そのまま放置は危険</p>
+                <span
+                    style="display: inline-block; background: #FF9900; color: white; padding: 10px 25px; border-radius: 5px; font-weight: 700; transition: background 0.3s; font-size: 16px;">Amazonで詳しく見る</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- アクセス -->
+    <section class="section access-section">
+        <h2 class="section-title">アクセス・診療時間</h2>
+
+        <div class="access-info">
+            <h3
+                style="font-size: 24px; font-weight: 700; color: var(--accent-gold); text-align: center; margin-bottom: 30px;">
+                Hikarino休日</h3>
+
+            <div class="access-item">
+                <div class="access-icon">📍</div>
+                <div class="access-content">
+                    <h4>住所</h4>
+                    <p>〒329-2704<br>栃木県那須塩原市四区町1527-17</p>
+                </div>
+            </div>
+
+            <div class="access-item">
+                <div class="access-icon">📞</div>
+                <div class="access-content">
+                    <h4>電話番号</h4>
+                    <p>【完全予約制】下記からお電話ください。<br>
+                        <a href="tel:08064421591"
+                            style="color: var(--main-pink); text-decoration: none; font-weight: 700; font-size: 20px;">080-6442-1591</a><br>
+                        <span
+                            style="font-size: 13px; color: #666; display: block; margin-top: 5px;">※施術中は電話に出られませんので留守番電話にお名前と電話番号を伝言下さい。すぐに折り返し致します。</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="access-item">
+                <div class="access-icon">🕐</div>
+                <div class="access-content">
+                    <h4>営業時間</h4>
+                    <p>9:00〜21:00（最終受付20:00）</p>
+                </div>
+            </div>
+
+            <div class="access-item">
+                <div class="access-icon">📅</div>
+                <div class="access-content">
+                    <h4>定休日</h4>
+                    <p>不定休（土日祝も営業）</p>
+                </div>
+            </div>
+
+            <div class="access-item">
+                <div class="access-icon">🚗</div>
+                <div class="access-content">
+                    <h4>駐車場</h4>
+                    <p>専用駐車場3台完備（無料）</p>
+                </div>
+            </div>
+
+            <div class="access-item">
+                <div class="access-icon">🚃</div>
+                <div class="access-content">
+                    <h4>最寄り駅</h4>
+                    <p>JR西那須野駅より車で15分<br>東北自動車道西那須野ICより車で5分</p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* ギャラリーセクションのスタイル */
+            .gallery-container {
+                padding: 60px 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .gallery-title {
+                color: #ff758c;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+
+            .gallery-grid {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+                /* 画像同士の間隔 */
+                flex-wrap: wrap;
+                /* スマホで折り返す設定 */
+            }
+
+            .gallery-item {
+                flex: 1;
+                /* 3枚が均等に並ぶ */
+                min-width: 280px;
+                /* スマホで小さくなりすぎないよう調整 */
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 250px;
+                /* 高さを統一して綺麗に見せる */
+                object-fit: cover;
+                /* 画像を切り抜いて枠にフィットさせる */
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            /* マウスを乗せた時の動き */
+            .gallery-item img:hover {
+                transform: scale(1.03);
+            }
+
+            /* スマホ表示（画面が狭い時）の調整 */
+            @media (max-width: 768px) {
+                .gallery-grid {
+                    gap: 20px;
+                }
+
+                .gallery-item {
+                    flex: none;
+                    width: 100%;
+                    /* スマホでは1枚ずつ大きく表示 */
+                }
+
+                .gallery-item img {
+                    height: auto;
+                    /* スマホでは元の比率で見せる */
+                }
+            }
+        </style>
+
+        <section class="gallery-container">
+            <h2 class="gallery-title">整体院の雰囲気</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="20231028hikarinot1.webp" alt="Hikarino休日 院長">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="221108_Hikarinot2.webp" alt="Hikarino休日 受付">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="221108_Hikarinot3.webp" alt="Hikarino休日 外観">
+                </div>
+            </div>
+        </section>
+
+        <div class="map-container"
+            style="width: 100%; height: 450px; margin: 30px 0; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.605333830825!2d139.98292817637843!3d36.922987860163354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f948161643ee66f%3A0xdf047a4873433b52!2z5pW05L2T6ZmiIOODkuOCq-ODquODjuOCreODpeOCuOOCuOODhA!5e0!3m2!1sja!2sjp!4v1709190000000!5m2!1sja!2sjp"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- 最終CTA -->
+    <section class="final-cta">
+        <h2 class="serif">今すぐご予約ください</h2>
+
+        <p>もし、あなたが冷え性・むくみを本気で改善したい、<br>冷え知らずの快適な体を手に入れたいとお考えでしたら、<br>今すぐご予約ください。</p>
+
+        <p>当院は1日1名様限定です。<br>今月の残り枠はあと3名様となっております。</p>
+
+        <p>しかし、『どこに行っても一緒でしょ』<br>『本当に良くなるの?』と疑問に思われるのでしたら、<br>無理にご予約いただく必要はありません。</p>
+
+        <p>ただし、『一度試してみたい』<br>『本気で改善したい』と思われましたら、<br>今すぐ下記からご予約ください。</p>
+
+        <p style="font-weight: 700; font-size: 18px; margin-top: 30px;">初回1,980円のキャンペーンは<br>今月限りとなっております。</p>
+
+        <div class="cta-container">
+            <div class="cta-group">
+                <p class="cta-subtext">LINEで簡単に当院の施術予約が可能です。<br>ご質問や体のお悩み相談もお気軽にご連絡ください。</p>
+                <a href="https://lin.ee/43SUnkF" class="btn btn-line" style="padding: 10px 30px;"><img
+                        src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="60"
+                        border="0"></a>
+            </div>
+            <div class="cta-group">
+                <p class="cta-subtext">【完全予約制】施術のご予約は今すぐお電話</p>
+                <a href="tel:08064421591" class="btn btn-phone">080-6442-1591</a>
+                <p class="cta-subtext small">【受付時間】9時〜21時　 【定休日】不定休<br>※施術中は電話に出られませんので留守番電話にお名前と電話番号を伝言下さい。すぐに折り返し致します。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p><strong>Hikarino休日</strong><br>
+            〒329-2704 栃木県那須塩原市四区町1527-17<br>
+            TEL: 080-6442-1591<br>
+            営業時間：9:00〜21:00（最終受付20:00）<br>
+            定休日：不定休</p>
+
+        <p style="margin-top: 20px; font-size: 12px;">&copy; 2025 Hikarino休日. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // スクロールアニメーション
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reason-card, .result-card, .faq-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

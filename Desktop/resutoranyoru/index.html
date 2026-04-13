@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オールヴォワール - 那須ミッドシティホテル 1Fレストラン</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a252f;
+            --accent: #c4a47c;
+            --accent-light: #e6d5bc;
+            --text-main: #2c3e50;
+            --text-muted: #666e75;
+            --bg-site: #fdfdfb;
+            --white: #ffffff;
+            --badge-solo: #4a90e2;
+            --badge-share: #e27d4a;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', 'Noto Serif JP', serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background-color: var(--bg-site);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        header {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('restaurant.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 2rem;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15rem;
+            background: linear-gradient(transparent, var(--bg-site));
+        }
+
+        header h1 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        header h1 span {
+            display: block;
+            font-size: 0.4em;
+            letter-spacing: 0.4em;
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
+
+        header .subtitle {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            margin-bottom: 0.5rem;
+            z-index: 1;
+            text-transform: uppercase;
+        }
+
+        .business-hours {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 2px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .concept-section {
+            background: var(--white);
+            padding: 6rem 4rem;
+            margin-top: -5rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin-bottom: 8rem;
+        }
+
+        .concept-section h2 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .concept-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .concept-section p {
+            font-size: 1.15rem;
+            line-height: 2.2;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 300;
+        }
+
+        .concept-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            margin-top: 5rem;
+        }
+
+        .concept-point {
+            text-align: center;
+        }
+
+        .concept-point h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .concept-point p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* 新設: おすすめセット */
+        .recommended-sets {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 4rem;
+            margin: 0 -2rem 8rem;
+            text-align: center;
+        }
+
+        .recommended-sets h2 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .sets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .set-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .set-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .set-card h3 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .set-card .price {
+            font-size: 2rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .set-card .target {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .set-card ul {
+            list-style: none;
+            text-align: left;
+            color: var(--text-main);
+            line-height: 2;
+            font-size: 0.95rem;
+        }
+
+        .set-card ul li::before {
+            content: "✓ ";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .menu-section {
+            margin-bottom: 10rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .section-header .category-desc {
+            font-size: 0.95rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+        }
+
+        .menu-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .menu-image-section {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .menu-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            filter: sepia(10%) contrast(105%);
+        }
+
+        .menu-grid {
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .menu-item {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .menu-item:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .menu-item h3 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .menu-item .price {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        /* ボリュームバッジ */
+        .volume-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-left: 0.5rem;
+        }
+
+        .badge-solo {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .badge-share {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .badge-family {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+
+        .menu-item .description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* 新規メニュー強調 */
+        .new-badge {
+            position: absolute;
+            top: -0.5rem;
+            right: 0;
+            background: #ff4757;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        .drink-section {
+            padding: 8rem 0;
+            background: #f8f8f6;
+            margin: 0 -2rem;
+            padding: 8rem 4rem;
+        }
+
+        .drink-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 5rem 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .drink-category h3 {
+            font-family: 'Noto Serif JP', serif;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            border-left: 2px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .drink-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        .drink-name {
+            color: var(--text-main);
+        }
+
+        .drink-price {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        footer .footer-title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.2rem;
+            margin-bottom: 2rem;
+            opacity: 1;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        @media (max-width: 900px) {
+            .menu-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-image-section {
+                order: -1;
+                position: relative;
+                top: 0;
+                margin-bottom: 2rem;
+            }
+
+            .concept-section {
+                padding: 4rem 2rem;
+            }
+
+            .recommended-sets {
+                padding: 4rem 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 60vh;
+                background-attachment: scroll;
+            }
+
+            .container {
+                padding: 0 1.5rem 4rem;
+                overflow-x: hidden;
+            }
+
+            .drink-section {
+                padding: 4rem 1.5rem;
+                margin: 0 -1.5rem;
+            }
+
+            .recommended-sets {
+                padding: 4rem 1.5rem;
+                margin: 0 -1.5rem 6rem;
+            }
+
+            .sets-grid,
+            .concept-points,
+            .drink-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.4rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .lang-switch:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            transition: var(--transition);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .lang-btn.active {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Language visibility logic */
+        html[lang="en"] .lang-ja {
+            display: none;
+        }
+
+        html[lang="ja"] .lang-en {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .lang-switch {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .lang-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const setLanguage = (lang) => {
+                document.documentElement.lang = lang;
+                localStorage.setItem('preferredLang', lang);
+
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === lang);
+                });
+            };
+
+            const browserLang = navigator.language.split('-')[0];
+            const savedLang = localStorage.getItem('preferredLang');
+            const initialLang = savedLang || (browserLang === 'ja' ? 'ja' : 'en');
+
+            setLanguage(initialLang);
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="lang-switch">
+        <button class="lang-btn" data-lang="ja">JP</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <header>
+        <h1>Au Revoir<br><span class="lang-ja">オールヴォワール</span><span class="lang-en"
+                style="font-size: 0.4em; letter-spacing: 0.4em; margin-top: 1rem; opacity: 0.9;">French Fine Dining
+                Experience</span></h1>
+        <p class="subtitle lang-ja">那須ミッドシティホテル 1階レストラン</p>
+        <p class="subtitle lang-en">Nasu Mid-City Hotel 1F Restaurant</p>
+        <p class="subtitle lang-ja">お一人様でも、家族でも。那須の夜を、あなたらしく</p>
+        <p class="subtitle lang-en">Solo or Family. Enjoy your night your way.</p>
+        <div class="business-hours">
+            <span class="lang-ja">営業時間: 17:30〜21:00</span>
+            <span class="lang-en">Hours: 17:30-21:00</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- コンセプトセクション -->
+        <section class="concept-section">
+            <h2 class="lang-ja">ホテルの夜を、あなたのスタイルで</h2>
+            <h2 class="lang-en">Enjoy Hotel Nights in Your Style</h2>
+            <p class="lang-ja">
+                出張のビジネスマンがお一人様で気軽に立ち寄れる「ちょい飲み」から、<br>
+                週末の家族団らんまで。<br>
+                <span class="highlight">那須の食材にこだわった、ホテルレストランの安心品質</span>を<br>
+                親しみやすさでお届けします。
+            </p>
+            <p class="lang-en">
+                From a quick solo drink for business travelers to weekend family gatherings.<br>
+                We deliver the <span class="highlight">reliable quality of a hotel restaurant</span><br>
+                with the friendliness of an izakaya, featuring carefully selected Nasu ingredients.
+            </p>
+
+            <div class="concept-points">
+                <div class="concept-point">
+                    <h3 class="lang-ja">💼 ビジネスマン歓迎</h3>
+                    <h3 class="lang-en">💼 For Professionals</h3>
+                    <p class="lang-ja">お一人様でも入りやすい。¥1,500から楽しめる「ちょい飲みセット」をご用意</p>
+                    <p class="lang-en">Easy to enter alone. 1,500 yen "Quick Drink Sets" available.</p>
+                </div>
+                <div class="concept-point">
+                    <h3 class="lang-ja">👨‍👩‍👧‍👦 ファミリー対応</h3>
+                    <h3 class="lang-en">👨‍👩‍👧‍👦 For Families</h3>
+                    <p class="lang-ja">週末は家族でシェア。シェフ一押しの料理やセットメニューで団らんのひとときを</p>
+                    <p class="lang-en">Share with family on weekends. Enjoy the chef's recommended dishes and set menus.
+                    </p>
+                </div>
+                <div class="concept-point">
+                    <h3 class="lang-ja">🌾 地産地消</h3>
+                    <h3 class="lang-en">🌾 Local Ingredients</h3>
+                    <p class="lang-ja">那須野が原の新鮮野菜と栃木の食材を使った、ここだけの味わい</p>
+                    <p class="lang-en">Unique flavors using fresh vegetables from Nasu and local Tochigi ingredients.
+                    </p>
+        </section>
+
+        <!-- 消費税注釈 (セクション間の境界) -->
+        <p class="tax-note"
+            style="text-align: center; margin: 4rem 0; font-size: 0.95rem; color: var(--text-muted); font-family: 'Noto Serif JP', serif;">
+            <span class="lang-ja">※料金には全て消費税が含まれています。</span>
+            <span class="lang-en" style="margin-left: 1rem; opacity: 0.8;">(All prices include consumption tax.)</span>
+        </p>
+
+        <!-- おすすめセット(新設) -->
+        <section class="recommended-sets">
+            <h2 class="lang-ja">ビジネスマン応援 ちょい飲みセット</h2>
+            <h2 class="lang-en">Business Traveler Special - Quick Drink Set</h2>
+            <p class="lang-ja" style="margin-bottom: 3rem; font-size: 1.1rem; opacity: 0.9;">
+                一日の終わりに。那須の味覚を楽しみながら、心も体もお疲れ様の一杯を</p>
+            <p class="lang-en" style="margin-bottom: 3rem; font-size: 1.1rem; opacity: 0.9;">The perfect way to wind
+                down. Savor authentic local flavors with our high-value set menu.</p>
+
+            <div class="sets-grid" style="display: flex; justify-content: center;">
+                <div class="set-card" style="max-width: 500px; width: 100%;">
+                    <span class="target lang-ja">💼 お一人様客向け</span>
+                    <span class="target lang-en">💼 For Solo Guests</span>
+                    <h3 class="lang-ja">ちょい飲みセット</h3>
+                    <h3 class="lang-en">Quick Drink Set</h3>
+                    <div class="price">¥1,500</div>
+
+                    <div class="lang-ja" style="text-align: left;">
+                        <ul style="margin-bottom: 1.5rem;">
+                            <li>生ビール（中）、ハイボール、レモンサワーのいずれか１杯</li>
+                            <li>下記の料理から３品チョイス</li>
+                        </ul>
+                        <div
+                            style="background: rgba(196, 164, 124, 0.1); padding: 1.2rem; border-radius: 4px; font-size: 0.9rem; color: var(--text-main); line-height: 1.6;">
+                            ロース鴨のサラダ / スモークサーモンのマリネ / 焼き鳥 / フライドポテト / アジフライ / だし巻き卵 / タコのから揚げ / 鶏の唐揚げ / ソーセージ盛り / 枝豆 /
+                            冷奴
+                        </div>
+                    </div>
+
+                    <div class="lang-en" style="text-align: left;">
+                        <ul style="margin-bottom: 1.5rem;">
+                            <li>1 Drink (Draft Beer (M), Highball, or Lemon Sour)</li>
+                            <li>Choose 3 dishes from the following:</li>
+                        </ul>
+                        <div
+                            style="background: rgba(196, 164, 124, 0.1); padding: 1.2rem; border-radius: 4px; font-size: 0.85rem; color: var(--text-main); line-height: 1.6;">
+                            Roast Duck Salad / Smoked Salmon Marinade / Yakitori / French Fries / Fried Horse Mackerel /
+                            Dashimaki Tamago / Fried Octopus / Fried Chicken / Assorted Sausages / Edamame / Chilled
+                            Tofu
+                        </div>
+                    </div>
+
+                    <p class="lang-ja"
+                        style="margin-top: 2rem; font-size: 0.9rem; font-weight: 500; color: var(--primary);">
+                        1時間でサッと飲んで帰れる、ビジネスマンの定番</p>
+                    <p class="lang-en" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">A perfect
+                        choice for business travelers. Quick and satisfying.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">
+                <h2>Dinner Course</h2>
+                <p class="category-desc lang-ja">ディナーコース - 特別なひとときを彩るフルコース</p>
+                <p class="category-desc lang-en">Dinner Course - Full courses for a special occasion</p>
+            </div>
+
+            <div class="menu-layout">
+                <div class="menu-image-section">
+                    <img src="steak.webp" alt="ディナーコース" class="menu-image">
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">ステーキコースディナー</h3>
+                            <h3 class="lang-en">Steak Course Dinner</h3>
+                            <span class="price">¥5,600</span>
+                        </div>
+                        <div class="description lang-ja">
+                            <p>・オードブル盛り合わせ</p>
+                            <p>・本日のスープ</p>
+                            <p>・パスタ</p>
+                            <p>・とちぎ和牛のラウンドステーキ 温野菜添え</p>
+                            <p>・グリーンサラダ</p>
+                            <p>・パン又はライス</p>
+                            <p>・デザート盛り合わせ＆デミタスコーヒー</p>
+                        </div>
+                        <div class="description lang-en">
+                            <p>・Appetizer assortment</p>
+                            <p>・Today's soup</p>
+                            <p>・Pasta</p>
+                            <p>・Round steak of Tochigi Japanese cattle with seasonal vegetables</p>
+                            <p>・Green salad</p>
+                            <p>・Bread or Rice</p>
+                            <p>・Dessert assortment & Demitasse coffee</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">カジュアルディナーコース</h3>
+                            <h3 class="lang-en">Casual Dinner Course</h3>
+                            <span class="price">¥3,250</span>
+                        </div>
+                        <div class="description lang-ja">
+                            <p>・アミューズ</p>
+                            <p>・本日のスープ</p>
+                            <p>・メイン料理（下記より1品選択）</p>
+                            <p style="padding-left: 1em;">- 目鯛のソテー ブールブランソース</p>
+                            <p style="padding-left: 1em;">- 那須高原豚のステーキ</p>
+                            <p>・グリーンサラダ</p>
+                            <p>・パン又はライス</p>
+                            <p>・デザートとデミタスコーヒー</p>
+                        </div>
+                        <div class="description lang-en">
+                            <p>・Amuse-bouche</p>
+                            <p>・Today's soup</p>
+                            <p>・Main dish (Choice of one):</p>
+                            <p style="padding-left: 1em;">- Sauteed red snapper with beurre blanc sauce</p>
+                            <p style="padding-left: 1em;">- Nasu Kogen pork loin steak</p>
+                            <p>・Green salad</p>
+                            <p>・Bread or Rice</p>
+                            <p>・Dessert & Demitasse coffee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">
+                <h2>Tochigi's Material Menu</h2>
+                <p class="category-desc lang-ja">栃木の素材中心メニュー - 地元の豊かな恵みを味わう</p>
+                <p class="category-desc lang-en">Tochigi's Material Menu - Savor local ingredients</p>
+            </div>
+
+            <div class="menu-layout">
+                <div class="menu-image-section">
+                    <img src="hamburger.webp" alt="栃木の素材料理" class="menu-image">
+                    <p class="set-include-note lang-ja" style="margin-top: 10px; font-size: 0.85em; color: #555;">
+                        ※全品：本日のスープ、サラダ、ライスまたはパン、食後のコーヒー付き
+                    </p>
+                    <p class="set-include-note lang-en" style="font-size: 0.8em; color: #555;">
+                        *All include: Today's soup, salad, rice or bread, and coffee.
+                    </p>
+                </div>
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">国内産ビーフと那須高原豚のハンバーグ 200g</h3>
+                            <h3 class="lang-en">Hamburg Steak 200g (Beef & Pork Combination)</h3>
+                            <span class="price">¥2,618</span>
+                        </div>
+                        <p class="description lang-ja">
+                            和風ソース または マスタードソース<br>
+                            栃木が誇る那須高原豚と国産牛のジューシーな合挽き。
+                        </p>
+                        <p class="description lang-en">
+                            Choice of Japanese sauce or mustard sauce.<br>
+                            Juicy hamburger made with local Nasu Kogen pork.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">那須高原豚ロース肉ステーキ 130g</h3>
+                            <h3 class="lang-en">Nasu Kogen Pork Loin Steak 130g</h3>
+                            <span class="price">¥2,480</span>
+                        </div>
+                        <p class="description lang-ja">
+                            和風ソース または マスタードソース<br>
+                            きめ細やかで甘みのある脂身が特徴のブランド豚。
+                        </p>
+                        <p class="description lang-en">
+                            Choice of Japanese sauce or mustard sauce.<br>
+                            High-quality local pork known for its sweet, tender fat.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">ヤシオマスのバター焼き 120g</h3>
+                            <h3 class="lang-en">Butter-Sautéed Yashio Trout 120g</h3>
+                            <span class="price">¥3,255</span>
+                        </div>
+                        <p class="description lang-ja">
+                            栃木県特産のプレミアムなニジマス「ヤシオマス」を香ばしく。
+                        </p>
+                        <p class="description lang-en">
+                            Premium Yashio trout, a specialty of Tochigi, sautéed in rich butter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- キッズプレート (新設) -->
+        <section class="menu-section">
+            <div class="section-header">
+                <h2>Kids Plate</h2>
+                <p class="category-desc lang-ja">キッズプレート - お子様向けメニュー</p>
+                <p class="category-desc lang-en">Kids Plate - For Children</p>
+            </div>
+            <div class="menu-layout">
+                <div class="menu-image-section">
+                    <img src="kids.webp" alt="キッズプレート" class="menu-image">
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">キッズプレート</h3>
+                            <h3 class="lang-en">Kids Plate</h3>
+                            <span class="price">¥980</span>
+                        </div>
+                        <div class="description lang-ja">
+                            <p>・煮込みハンバーグとフライドポテト</p>
+                            <p>・チキンライス・目玉焼き</p>
+                            <p>・海老フライ タルタルソース</p>
+                            <p>・サラダ</p>
+                            <p>・ミニデザートとオレンジジュース</p>
+                        </div>
+                        <div class="description lang-en">
+                            <p>・Stewed hamburger & French fries</p>
+                            <p>・Chicken rice with fried egg</p>
+                            <p>・Fried shrimp with tartar sauce</p>
+                            <p>・Salad</p>
+                            <p>・Mini dessert & Orange juice</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 単品料理 (IMG_6215.JPG) -->
+        <section class="menu-section">
+            <div class="section-header">
+                <h2>Side Dishes</h2>
+                <p class="category-desc lang-ja">単品料理</p>
+                <p class="category-desc lang-en">Side Dishes</p>
+            </div>
+            <div class="menu-layout">
+                <div class="menu-image-section">
+                    <img src="IMG_6215.webp" alt="単品料理" class="menu-image">
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">トマトサラダ</h3>
+                            <h3 class="lang-en">Tomato Salad</h3>
+                            <span class="price">¥620</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">自家製ピクルス</h3>
+                            <h3 class="lang-en">Homemade Pickles</h3>
+                            <span class="price">¥650</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">フレンチフライポテト</h3>
+                            <h3 class="lang-en">French Fries</h3>
+                            <span class="price">¥680</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">グリーンサラダ</h3>
+                            <h3 class="lang-en">Green Salad</h3>
+                            <span class="price">¥600</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">カキフライ</h3>
+                            <h3 class="lang-en">Fried Oysters</h3>
+                            <span class="price">¥1,498</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">6種ソーセージ盛り</h3>
+                            <h3 class="lang-en">Assorted Sausages</h3>
+                            <span class="price">¥1,445</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 肉・魚料理 (IMG_6216.JPG) -->
+        <section class="menu-section">
+            <div class="section-header">
+                <h2>Meat & Seafood dishes</h2>
+                <p class="category-desc lang-ja">肉・魚料理 - 厳選した地産食材のメインディッシュ</p>
+                <p class="category-desc lang-en">Meat & Seafood Dishes - Specially selected local main courses</p>
+            </div>
+            <div class="menu-layout">
+                <div class="menu-image-section">
+                    <img src="IMG_6216.webp" alt="肉魚料理" class="menu-image">
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">那須高原豚のステーキ (150g)</h3>
+                            <h3 class="lang-en">Nasu Kogen Pork Loin Steak (150g)</h3>
+                            <span class="price">¥1,980</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">とちぎ和牛のストロガノフ風</h3>
+                            <h3 class="lang-en">Tochigi Wagyu Beef Stroganoff</h3>
+                            <span class="price">¥2,850</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">とちぎ和牛のサイコロステーキ (150g)</h3>
+                            <h3 class="lang-en">Tochigi Wagyu Beef Diced Steak (150g)</h3>
+                            <span class="price">¥3,245</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">とちぎ和牛のラウンドステーキ (150g)</h3>
+                            <h3 class="lang-en">Tochigi Wagyu Beef Round Steak (150g)</h3>
+                            <span class="price">¥4,698</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">目鯛のソテー ブールブランソース</h3>
+                            <h3 class="lang-en">Sauteed Red Snapper with Beurre Blanc Sauce</h3>
+                            <span class="price">¥2,450</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">ヤシオマスのバター焼き (150g)</h3>
+                            <h3 class="lang-en">Butter-Baked Yashio Trout (150g)</h3>
+                            <span class="price">¥2,755</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="menu-section">
+            <div class="section-header">
+                <h2>Pasta & Pizza</h2>
+                <p class="category-desc lang-ja">パスタ・ピッツァ - こだわりのイタリアン</p>
+                <p class="category-desc lang-en">Pasta & Pizza - Authentic Italian Flavors</p>
+            </div>
+            <div class="menu-layout">
+                <div class="menu-image-section">
+                    <img src="peperon.webp" alt="パスタ・ピッツァ" class="menu-image">
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">ボロネーズパスタ</h3>
+                            <h3 class="lang-en">Bolognase</h3>
+                            <span class="price">¥1,295</span>
+                        </div>
+                        <p class="description lang-ja">じっくり煮込んだ肉の旨味あふれるソース</p>
+                        <p class="description lang-en">Rich meat sauce slow-cooked to perfection.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">ペスカトーレ</h3>
+                            <h3 class="lang-en">Pescatore</h3>
+                            <span class="price">¥1,995</span>
+                        </div>
+                        <p class="description lang-ja">新鮮な魚介をふんだんに使用した贅沢な一皿</p>
+                        <p class="description lang-en">Luxurious pasta with a variety of fresh seafood.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">アーリオオーリオ ペペロンチーノ（塩味）</h3>
+                            <h3 class="lang-en">Peperoncino</h3>
+                            <span class="price">¥980</span>
+                        </div>
+                        <p class="description lang-ja">ニンニクと唐辛子の香りが引き立つシンプルな味わい</p>
+                        <p class="description lang-en">Simple flavor with garlic and chili pepper aroma.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">MIXピザ</h3>
+                            <h3 class="lang-en">Mix pizza</h3>
+                            <span class="price">¥1,000</span>
+                        </div>
+                        <p class="description lang-ja">具材たっぷりの定番ミックスピザ</p>
+                        <p class="description lang-en">Classic pizza with assorted toppings.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">ピッツァクワトロ</h3>
+                            <h3 class="lang-en">Pizza Quattro</h3>
+                            <span class="price">¥1,300</span>
+                        </div>
+                        <p class="description lang-ja">4種類のチーズが織りなす濃厚なコク</p>
+                        <p class="description lang-en">Rich flavor made with four kinds of cheese.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">ガーリックトースト</h3>
+                            <h3 class="lang-en">Garlic toast</h3>
+                            <span class="price">¥450</span>
+                        </div>
+                        <p class="description lang-ja">食欲をそそるニンニクの香ばしいパン</p>
+                        <p class="description lang-en">Fragrant toasted bread with savory garlic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">
+                <h2>Curry, Rice Bowls & Ochazuke</h2>
+                <p class="category-desc lang-ja">カレー・丼・茶漬け - 栃木和牛を贅沢に味わう</p>
+                <p class="category-desc lang-en">Curry, Rice Bowls & Ochazuke - Savor Local Wagyu Beef</p>
+            </div>
+            <div class="menu-layout">
+                <div class="menu-image-section">
+                    <img src="gyudon.webp" alt="カレー・丼・茶漬け" class="menu-image">
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">野菜カレー</h3>
+                            <h3 class="lang-en">Vegetable Curry</h3>
+                            <span class="price">¥1,000</span>
+                        </div>
+                        <p class="description lang-ja">彩り豊かな野菜をたっぷり使用したヘルシーなカレー</p>
+                        <p class="description lang-en">Healthy curry with a variety of colorful vegetables.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">栃木和牛のスタミナ丼</h3>
+                            <h3 class="lang-en">Tochigi Wagyu Beef Stamina Rice Bowl</h3>
+                            <span class="price">¥2,500</span>
+                        </div>
+                        <p class="description lang-ja">ブランド牛「栃木和牛」を贅沢に使用した、元気の出る一杯</p>
+                        <p class="description lang-en">A hearty rice bowl featuring premium Tochigi Wagyu beef.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">豚バラ肉のスタ丼</h3>
+                            <h3 class="lang-en">Pork Belly "Suta-don"</h3>
+                            <span class="price">¥1,500</span>
+                        </div>
+                        <p class="description lang-ja">ボリューム満点！秘伝のタレで焼き上げた豚バラ肉が食欲をそそります</p>
+                        <p class="description lang-en">Flavorful pork belly grilled with a special savory sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="lang-ja">栃木和牛の牛すじ茶づけ</h3>
+                            <h3 class="lang-en">Tochigi Wagyu Beef Sinew Ochazuke</h3>
+                            <span class="price">¥998</span>
+                        </div>
+                        <p class="description lang-ja">トロトロに煮込んだ和牛すじを出汁でさらっと。お食事の締めに</p>
+                        <p class="description lang-en">Tender Wagyu beef sinew in a light dashi broth. Perfect to finish
+                            your meal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="drink-section">
+            <div class="section-header">
+                <h2>Beverages</h2>
+                <p class="category-desc lang-ja">ドリンクメニュー</p>
+                <p class="category-desc lang-en">Drink Menu</p>
+            </div>
+
+            <div class="drink-image-container" style="text-align: center; margin-bottom: 30px;">
+                <img src="drink.webp" alt="Beverages Menu" class="drink-image"
+                    style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+
+            <div class="drink-grid">
+                <div class="drink-category">
+                    <h3>Beer</h3>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">生ビール(中)</span>
+                        <span class="drink-name lang-en">Draft Beer (M)</span>
+                        <span class="drink-price">¥700</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">ノンアルコールビール</span>
+                        <span class="drink-name lang-en">Non-Alcohol Beer</span>
+                        <span class="drink-price">¥550</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">アサヒスーパードライ(瓶)</span>
+                        <span class="drink-name lang-en">Asahi Super Dry (Bottle)</span>
+                        <span class="drink-price">¥650</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">キリン一番搾り(瓶)</span>
+                        <span class="drink-name lang-en">Kirin Ichiban Shibori (Bottle)</span>
+                        <span class="drink-price">¥650</span>
+                    </div>
+                </div>
+
+                <div class="drink-category">
+                    <h3>Highball & Sour</h3>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">ブラックニッカハイボール</span>
+                        <span class="drink-name lang-en">Black Nikka Highball</span>
+                        <span class="drink-price">¥600</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">デュワーズハイボール</span>
+                        <span class="drink-name lang-en">Dewar's Highball</span>
+                        <span class="drink-price">¥860</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">レモンサワー</span>
+                        <span class="drink-name lang-en">Lemon Sour</span>
+                        <span class="drink-price">¥500</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">グレープフルーツサワー</span>
+                        <span class="drink-name lang-en">Grapefruit Sour</span>
+                        <span class="drink-price">¥500</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">ウーロンハイ</span>
+                        <span class="drink-name lang-en">Oolong Tea with Shochu</span>
+                        <span class="drink-price">¥500</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">ライムサワー</span>
+                        <span class="drink-name lang-en">Lime Sour</span>
+                        <span class="drink-price">¥550</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">栃木ゆずクラフトチューハイ</span>
+                        <span class="drink-name lang-en">Tochigi Yuzu Craft Chuhai</span>
+                        <span class="drink-price">¥680</span>
+                    </div>
+                </div>
+
+                <div class="drink-category">
+                    <h3>Wine</h3>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">グラスワイン(赤/白)</span>
+                        <span class="drink-name lang-en">Glass Wine (Red / White)</span>
+                        <span class="drink-price">¥680</span>
+                    </div>
+
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">ボトルワイン各種</span>
+                        <span class="drink-name lang-en">Bottled Wine (Various)</span>
+                        <span class="drink-price">¥3,900〜</span>
+                    </div>
+                    <div class="wine-note lang-ja"
+                        style="font-size: 0.85em; margin-top: 10px; opacity: 0.8; padding-left: 10px;">※その他ワインリスト有</div>
+                    <div class="wine-note lang-en"
+                        style="font-size: 0.8em; margin-top: 5px; opacity: 0.8; padding-left: 10px;">*Other wine
+                        selections available.</div>
+                </div>
+
+                <div class="drink-category">
+                    <h3>Sake & Shochu</h3>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">栃木地酒(1合)</span>
+                        <span class="drink-name lang-en">Tochigi Local Sake (180ml)</span>
+                        <span class="drink-price">¥690～</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">冷酒(300ml)</span>
+                        <span class="drink-name lang-en">Chilled Sake（300ml）</span>
+                        <span class="drink-price">¥1,380</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">芋焼酎/麦焼酎</span>
+                        <span class="drink-name lang-en">Imo / Mugi </span>
+                        <span class="drink-price">¥650～</span>
+                    </div>
+                    <div class="drink-item">
+                        <span class="drink-name lang-ja">梅酒</span>
+                        <span class="drink-name lang-en">Umeshu (Plum Wine)</span>
+                        <span class="drink-price">¥830</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ソフトドリンク (IMG_6225.JPG) -->
+        <div class="drink-category"
+            style="grid-column: 1 / -1; margin-top: 2rem; border-top: 1px solid var(--accent-light); padding-top: 3rem;">
+            <h3>Soft Drinks</h3>
+            <div class="soft-drink-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem 4rem;">
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">氷温熟成珈琲</span>
+                    <span class="drink-name lang-en">Aged Coffee</span>
+                    <span class="drink-price">¥600</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">カフェラテ</span>
+                    <span class="drink-name lang-en">Cafe Latte</span>
+                    <span class="drink-price">¥650</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">エスプレッソ</span>
+                    <span class="drink-name lang-en">Espresso</span>
+                    <span class="drink-price">¥700</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">アイスコーヒー</span>
+                    <span class="drink-name lang-en">Iced Coffee</span>
+                    <span class="drink-price">¥550</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">紅茶</span>
+                    <span class="drink-name lang-en">Black Tea</span>
+                    <span class="drink-price">¥550</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">ハーブティー</span>
+                    <span class="drink-name lang-en">Herb Tea</span>
+                    <span class="drink-price">¥600</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">ウーロン茶</span>
+                    <span class="drink-name lang-en">Oolong Tea</span>
+                    <span class="drink-price">¥500</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">コーラ</span>
+                    <span class="drink-name lang-en">Coke</span>
+                    <span class="drink-price">¥550</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">オレンジジュース</span>
+                    <span class="drink-name lang-en">Orange Juice</span>
+                    <span class="drink-price">¥500</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">ジンジャーエール</span>
+                    <span class="drink-name lang-en">Ginger Ale</span>
+                    <span class="drink-price">¥550</span>
+                </div>
+                <div class="drink-item">
+                    <span class="drink-name lang-ja">トマトジュース</span>
+                    <span class="drink-name lang-en">Tomato Juice</span>
+                    <span class="drink-price">¥550</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    </div>
+
+    <footer>
+        <p class="footer-title">Au Revoir<br><span class="lang-ja">(オールヴォワール)</span></p>
+        <p class="lang-ja">那須ミッドシティホテル 1階レストラン</p>
+        <p class="lang-en">Nasu Mid-City Hotel 1F Restaurant</p>
+        <p class="lang-ja">営業時間: 17:30〜21:00</p>
+        <p class="lang-en">Hours: 17:30-21:00</p>
+        <p class="lang-ja" style="margin-top: 2rem; opacity: 0.8;">
+            平日のビジネス利用から、週末のご家族でのお食事まで<br>一人でも、大切な人とでも。那須の夜を、あなたらしく</p>
+        <p class="lang-en" style="margin-top: 2rem; opacity: 0.8;">From weekday business use to weekend family
+            dinners.<br>Whether alone or with loved ones, enjoy your Nasu night your way.</p>
+    </footer>
+</body>
+
+</html>
